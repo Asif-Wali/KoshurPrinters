@@ -11,11 +11,11 @@ function classNames(...classes) {
 
 const Navbar=()=>{
 
-  return<Disclosure as="nav" className="  bg-yellow-500 w-full border-2 border-solid border-pink-400">
+  return<Disclosure as="nav" className="  bg-cyan-600 w-full">
   {({ open }) => (
     <>
       <div className="mx-auto w-11/12 px-2 sm:px-6 lg:px-8 justify-between">
-        <div className="relative flex h-18 items-center justify-between">
+        <div className="relative flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
           <Link to="/">
