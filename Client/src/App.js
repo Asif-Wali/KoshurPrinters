@@ -8,6 +8,7 @@ import {Login} from "./Pages/Login";
 import {Register} from "./Pages/Register";
 import {Products} from "./Pages/Products";
 import { Footer } from "./Components/Footer";
+import { ContactUs } from "./Pages/ContactUs";
 export default function App() {
   return (
     <div>
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contactUs" element={<ContactUs/>} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/products" element={<Products/>}/>
