@@ -23,7 +23,7 @@ const Navbar=()=>{
           </div>
           {/* Burger Menu */}
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
-            <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-white bg-Secondary hover:bg-Primary hover:text-white  ring-2 ring-Secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-white bg-Primary hover:bg-Secondary hover:text-white  ring-2 ring-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               {open ? (
@@ -65,35 +65,35 @@ const Navbar=()=>{
         <div className="space-y-1 px-2 pb-3 pt-2">
         <Link to="/about">
         <Disclosure.Button
-        className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-green-700 hover:text-white
+        className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
           block rounded-md px-3 py-2 text-base font-medium'
       >About
       </Disclosure.Button>
       </Link>
       <Link to="/contactUs">
         <Disclosure.Button
-        className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-green-700 hover:text-white
+        className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
           block rounded-md px-3 py-2 text-base font-medium'
       > Contact us
       </Disclosure.Button>
       </Link>
       <Link to="/products">
         <Disclosure.Button
-        className='bg-gray-900 mb-2  w-full text-white text-gray-300 hover:bg-green-700 hover:text-white
+        className='bg-gray-900 mb-2  w-full text-white text-gray-300 hover:bg-Primary hover:text-white
           block rounded-md px-3 py-2 text-base font-medium'
       >Products
       </Disclosure.Button>
       </Link>
       <Link to="/cart">
       <Disclosure.Button
-      className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-green-700 hover:text-white
+      className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
         block rounded-md px-3 py-2 text-base font-medium'
     >Cart
     </Disclosure.Button>
       </Link>
       <Link to="/profile">
         <Disclosure.Button
-        className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-green-700 hover:text-white
+        className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
           block rounded-md px-3 py-2 text-base font-medium'>
       {/**Conditional Rendering**/}
       Profile
