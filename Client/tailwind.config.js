@@ -8,7 +8,7 @@ module.exports = {
       keyframes:{
         moveFromLeft:{
           from:{
-            transform: 'translateX(-110vw, 110vh)',
+            transform: 'translateX(-110vw)',
           },
           to:{
             transform: 'translateX(0)'
@@ -16,7 +16,7 @@ module.exports = {
         },
         moveFromRight:{
           from:{
-            transform: 'translateX(110vw, 110vh)',
+            transform: 'translateX(110vw)',
           },
           to:{
             transform: 'translateX(0)'
