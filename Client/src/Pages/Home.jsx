@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="flex flex-col items-center justify-between lg:flex-row">
-        <div className="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0">
+        <div className="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0 animate-moveFromLeft">
           <div className="max-w-xl mb-6">
             <div>
               <p className="inline-block px-4 py-2 text-center mb-4 text-xl font-bold tracking-wider bg-gray-900 rounded-full text-white">
@@ -33,13 +33,13 @@ export const Home = () => {
 
               </Link>
             <Link to="/about"
-              className="inline-flex items-center font-semibold text-cyan-800 transition-colors duration-200 hover:text-deep-purple-accent-700 inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md-primary md:w-auto md:mr-4 md:mb-0 bg-cyan-700 text-white hover:bg-gray-400  focus:shadow-outline focus:outline-none"
+              className="inline-flex items-center font-semibold text-cyan-800 transition-colors duration-200 hover:text-deep-purple-accent-700 inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md-primary md:w-auto md:mr-4 md:mb-0 bg-cyan-700 text-white hover:bg-cyan-500  focus:shadow-outline focus:outline-none"
             >
               Learn more &#8594;
             </Link>
           </div>
         </div>
-        <div className="relative lg:w-1/2">
+        <div className="relative lg:w-1/2  animate-moveFromRight">
           <img
             className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
             src={ScreenPrinter}
