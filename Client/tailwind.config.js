@@ -43,8 +43,8 @@ module.exports = {
       animation: {
         'moveFromLeft': 'moveFromLeft 3s linear forwards',
         'moveFromRight':  'moveFromRight 3s linear forwards',
-        'moveFromBottom': 'moveFromBottom 5s linear forwards',
-        'moveFromBottom2': 'moveFromBottom2 5s linear forwards',
+        'moveFromBottom': 'moveFromBottom 6.5s linear forwards',
+        'moveFromBottom2': 'moveFromBottom2 6.5s linear forwards',
       },
       colors: {
         'Secondary': '#658289',
