@@ -21,12 +21,21 @@ module.exports = {
           to:{
             transform: 'translateX(0)'
           },
-        }
+        },
+        moveFromBottom:{
+          from:{
+            transform: 'translateY(5vh)',
+          },
+          to:{
+            transform: 'translateY(0)'
+          },
+        },
       },
     
       animation: {
         'moveFromLeft': 'moveFromLeft 3s linear forwards',
         'moveFromRight':  'moveFromRight 3s linear forwards',
+        'moveFromBottom': 'moveFromBottom 3s linear forwards',
       },
       colors: {
         'Secondary': '#658289',
