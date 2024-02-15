@@ -25,8 +25,8 @@ module.exports = {
       },
     
       animation: {
-        'moveFromLeft': 'moveFromLeft 2s linear forwards',
-        'moveFromRight':  'moveFromRight 2s linear forwards',
+        'moveFromLeft': 'moveFromLeft 3s linear forwards',
+        'moveFromRight':  'moveFromRight 3s linear forwards',
       },
       colors: {
         'Secondary': '#658289',

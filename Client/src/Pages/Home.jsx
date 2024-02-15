@@ -5,7 +5,7 @@ import ScreenPrinter from "../Images/ScreenPrinter.jpeg"
 
 export const Home = () => {
 
-  return (
+  return (<div>
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="flex flex-col items-center justify-between lg:flex-row">
         <div className="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0 animate-moveFromLeft">
@@ -47,8 +47,52 @@ export const Home = () => {
         </div>
       </div>
     </div>
-  );
-};
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-2">
+          <div className="flex items-center justify-center lg:pl-8 animate-moveFromLeft">
+              <div className="flex flex-col items-end px-3">
+                <img
+                  className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
+                  src="https://www.brprinters.com/wp-content/uploads/2022/11/what-is-screen-printing-1920x1080-2-1536x864.jpg"
+                  alt="Screen Printing Machine"
+                />
+                <img
+                  className="object-cover w-24 h-24 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
+                  src="https://cdn-gjkdp.nitrocdn.com/JtLCHzGIeDqwNcPkNDwtksvsgIwnNCEu/assets/images/optimized/rev-4c73667/www.brushyourideas.com/blog/wp-content/uploads/2021/04/common_screen_printing.png"
+                  alt="Pushing Ink through Squeegee"
+                />
+              </div>
+              <div className="px-3">
+                <img
+                  className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
+                  src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png"
+                  alt="Printed T-Shirt"
+                />
+              </div>
+          </div>
+            <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg animate-moveFromRight">
+            
+              <div className="max-w-xl mb-6">
+                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                  What
+                  <span className="inline-block mx-2 text-Primary">
+                    Screen Printing
+                  </span>
+                  is ?
+                </h2>
+                <p className="text-base text-gray-700 md:text-lg">
+                Screen printing is a printing technique that uses a stencil (or screen) to transfer ink to a substrate. The screen, usually made of silk or polyester, is prepared in such a way that some areas allow the ink to pass through, while others don’t. By pushing the ink through the screen using a blade or a squeegee, the desired image is transferred to the material beneath.
+                </p>
+              </div>
+              
+            </div>
+            
+          </div>
+    </div>
+    </div>
+      );
+    };
+
 
 
 
