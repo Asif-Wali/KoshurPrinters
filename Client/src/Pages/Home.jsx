@@ -9,16 +9,15 @@ export const Home = () => {
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="flex flex-col items-center justify-between lg:flex-row">
         <div className="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0 animate-moveFromLeft">
-          <div className="max-w-xl mb-6">
+          <div className="max-w-xl mb-8">
             <div>
               <p className="inline-block px-4 py-2 text-center mb-4 text-xl font-bold tracking-wider bg-gray-900 rounded-full text-white">
                 Koshur Printers
               </p>
             </div>
-            <h2 className="max-w-lg  font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            <h2 className="max-w-lg  font-sans text-3xl font-bold tracking-tight mb-1 text-gray-900 sm:text-4xl sm:leading-none">
               You Imagine,</h2>
-              <br className="hidden md:block" />
-             <h2 className=" text-Primary max-w-lg mb-4 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">We Print.{' '}</h2> 
+             <h2 className=" text-Primary max-w-lg mb-4 font-sans mt-2, text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">We Print.{' '}</h2> 
             <p className="text-base text-gray-700 md:text-lg">
             Providing Complete Uniforms Solution and Branding solution to Businesses and Institutions.
             <br></br>

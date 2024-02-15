@@ -8,7 +8,7 @@ module.exports = {
       keyframes:{
         moveFromLeft:{
           from:{
-            transform: 'translateX(-110vw)',
+            transform: 'translateX(-5vw)',
           },
           to:{
             transform: 'translateX(0)'
@@ -16,7 +16,7 @@ module.exports = {
         },
         moveFromRight:{
           from:{
-            transform: 'translateX(110vw)',
+            transform: 'translateX(5vw)',
           },
           to:{
             transform: 'translateX(0)'
@@ -25,8 +25,8 @@ module.exports = {
       },
     
       animation: {
-        'moveFromLeft': 'moveFromLeft 3s linear forwards',
-        'moveFromRight':  'moveFromRight 3s linear forwards',
+        'moveFromLeft': 'moveFromLeft 2s linear forwards',
+        'moveFromRight':  'moveFromRight 2s linear forwards',
       },
       colors: {
         'Secondary': '#658289',
