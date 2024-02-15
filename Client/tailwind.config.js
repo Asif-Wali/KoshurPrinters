@@ -24,18 +24,27 @@ module.exports = {
         },
         moveFromBottom:{
           from:{
-            transform: 'translateY(5vh)',
+            transform: 'translateY(10vh)',
           },
           to:{
             transform: 'translateY(0)'
           },
         },
+        moveFromBottom2:{
+          from:{
+            transform: 'translateY(20vh)',
+          },
+          to:{
+            transform: 'translateY(0)'  
+          },
+        }
       },
     
       animation: {
         'moveFromLeft': 'moveFromLeft 3s linear forwards',
         'moveFromRight':  'moveFromRight 3s linear forwards',
-        'moveFromBottom': 'moveFromBottom 3s linear forwards',
+        'moveFromBottom': 'moveFromBottom 5s linear forwards',
+        'moveFromBottom2': 'moveFromBottom2 5s linear forwards',
       },
       colors: {
         'Secondary': '#658289',

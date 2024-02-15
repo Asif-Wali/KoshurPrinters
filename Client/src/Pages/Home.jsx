@@ -28,7 +28,7 @@ export const Home = () => {
           </div>
           <div className="flex flex-col items-center md:flex-row">
             <Link to="/products"
-              className="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md-primary md:w-auto md:mr-4 md:mb-0 bg-Primary text-white  hover:bg-pink-400 focus:shadow-outline focus:outline-none">
+              className="inline-flex items-center  justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md-primary md:w-auto md:mr-4 md:mb-0 bg-Primary text-white  hover:bg-pink-400 focus:shadow-outline focus:outline-none">
               Start Shopping
               <ShoppingBagIcon className="h-9 w-auto items-center font-medium	justify-center rounded-md p-2"/>
 
@@ -93,77 +93,82 @@ export const Home = () => {
     </div>
 
   {/* Gallery*/}
-  <section class="text-gray-600 body-font">
-  <div class="container px-4 py-16 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-4xl font-bold title-font mb-4 text-cyan-800">What we do?</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-justify">At our company, we specialize in bringing your designs to life on various surfaces, including textiles, mugs, bottles, bags, and more. From design consultation to precise ink mixing and meticulous printing, we handle every step with care and expertise. With our dedication to quality and attention to detail, we ensure that your custom printed products are not only visually stunning but also durable and long-lasting. Here, down below, is the sample of our work:-</p>
+  <section className="text-gray-600 body-font">
+  <div className="container px-4 py-16 mx-auto">
+    <div className="flex flex-col text-center w-full mb-20">
+      <h1 className="sm:text-3xl text-4xl font-bold title-font mb-4 text-cyan-800">What we do?</h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-justify">At our company, we specialize in bringing your designs to life on various surfaces, including textiles, mugs, bottles, bags, and more. From design consultation to precise ink mixing and meticulous printing, we handle every step with care and expertise. With our dedication to quality and attention to detail, we ensure that your custom printed products are not only visually stunning but also durable and long-lasting. Here, down below, is the sample of our work:-</p>
     </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+    <div className="flex flex-wrap -m-4">
+      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom2">
+        <div className="flex relative">
+          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
+          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
+            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
           </div>
         </div>
       </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom2">
+        <div className="flex relative">
+          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
+          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
+            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
           </div>
         </div>
       </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom2">
+        <div className="flex relative">
+          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
+          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
+            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
           </div>
         </div>
       </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom">
+        <div className="flex relative">
+          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
+          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
+            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
           </div>
         </div>
       </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom">
+        <div className="flex relative">
+          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
+          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
+            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
           </div>
         </div>
       </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom">
+        <div className="flex relative">
+          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
+          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
+            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
   
-  <div className=' flex items-center justify-center'><Link to="/products"><button class="text-white animate-pulse bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center"> See More &#8594;</button></Link>  </div>
+  <div className=' flex items-center justify-center'>
+    <Link to="/products">
+      <button className="text-white animate-pulse bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center"> See More &#8594;
+      </button>
+    </Link> 
+   </div>
 </section>
     </div>
       );
