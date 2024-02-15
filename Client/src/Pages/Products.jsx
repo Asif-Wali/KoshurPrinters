@@ -7,7 +7,6 @@ export const Products = () => {
     // Scroll to the top of the screen
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // This makes the scrolling smooth
     });
     
       },[]);
