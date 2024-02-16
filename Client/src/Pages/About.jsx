@@ -1,16 +1,7 @@
 
 import React from 'react';
-import { ShoppingBagIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
 import ScreenPrinter from "../Images/ScreenPrinter.jpeg";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
 
-// import required modules
-import { Pagination } from 'swiper/modules';
 
 
 export const About = () => {
@@ -39,7 +30,11 @@ export const About = () => {
             {/* Partner Section*/}
             <div className="rounded shadow-xl py-12">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-bold mb-6 text-center text-Primary">Meet Our Partners</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-Primary">
+                Meet Our 
+                <span className="inline-block mx-2 text-cyan-800 ">
+                 Partners
+                </span></h2>
                 <div className="overflow-x-auto whitespace-nowrap scrollbar1">
                   <div className="flex space-x-6">
                   
@@ -56,51 +51,7 @@ export const About = () => {
                 </div>
               </div>
             </div>
- {/*<Swiper
-      pagination={{
-        dynamicBullets: true,
-      }}
-      modules={[Pagination]}
-      className="w-1/2 h-1/2"
-    >
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-      <SwiperSlide className=' text-center text-base bg-Primary flex justify-center items-center'> 
-        <img className=' block object-contain ' 
-            src="https://comicvine.gamespot.com/a/uploads/square_small/11117/111178336/7080194-7382724028-unkno.png" alt="Roronoa Zoro"/>  
-      </SwiperSlide>
-    </Swiper>
-    */}
+ 
 </div>)
 };
 
