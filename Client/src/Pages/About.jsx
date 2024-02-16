@@ -37,9 +37,9 @@ export const About = () => {
               </div>
             </div>
             {/* Partner Section*/}
-            <div className="rounded shadow-xl py-12 mx-16">
+            <div className="rounded shadow-xl py-12">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-extrabold mb-6 text-center text-Primary">Meet Our Partners</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-Primary">Meet Our Partners</h2>
                 <div className="overflow-x-auto whitespace-nowrap scrollbar1">
                   <div className="flex space-x-6">
                   
@@ -56,11 +56,6 @@ export const About = () => {
                 </div>
               </div>
             </div>
-
-   
-
-      );
-
  {/*<Swiper
       pagination={{
         dynamicBullets: true,
@@ -106,8 +101,7 @@ export const About = () => {
       </SwiperSlide>
     </Swiper>
     */}
-</div>
-  )
+</div>)
 };
 
 
