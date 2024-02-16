@@ -15,10 +15,6 @@ export const Products = () => {
   <div className="absolute inset-0 flex items-start mt-6 justify-center">
 
     <h1 className=" text-white text-center font-bold text-4xl">This Page is Under Construction !</h1>
-
-  <h2 className="font-sans text-3xl text-center font-bold mx-auto tracking-tight text-cyan-900 sm:text-4xl sm:leading-none">
-  Hii
-  </h2>
 </div>
 
 

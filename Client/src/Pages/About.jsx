@@ -37,21 +37,21 @@ export const About = () => {
               </div>
             </div>
             {/* Partner Section*/}
-            <div className="bg-gray-100 py-8">
+            <div className="rounded shadow-xl py-12 mx-16">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-extrabold text-gray-900 mb-6">Meet Our Partners</h2>
-                <div className="overflow-x-auto whitespace-nowrap">
+                <h2 className="text-3xl font-extrabold mb-6 text-center text-Primary">Meet Our Partners</h2>
+                <div className="overflow-x-auto whitespace-nowrap scrollbar1">
                   <div className="flex space-x-6">
                   
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 1" />
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 2" />
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 3" />
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 1" />
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 2" />
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 3" />
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 1" />
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 2" />
-                    <img className="h-16" src={ScreenPrinter} alt="Partner 3" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 1" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 2" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 3" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 1" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 2" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 3" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 1" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 2" />
+                    <img className="h-48" src={ScreenPrinter} alt="Partner 3" />
                   </div>
                 </div>
               </div>
