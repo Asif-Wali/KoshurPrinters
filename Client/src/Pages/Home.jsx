@@ -49,12 +49,8 @@ export const Home = () => {
         </div>
       </div>
     </div>
+ {/* What is Screen Printing*/}
 
-
-
-
-
-    
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-2">
           <div className="flex items-center justify-center lg:pl-8 animate-moveFromLeft">
@@ -75,6 +71,7 @@ export const Home = () => {
                   className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
                   src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png"
                   alt="Printed T-Shirt"
+                  
                 />
               </div>
           </div>
@@ -97,6 +94,7 @@ export const Home = () => {
             
     </div>
     </div>
+    
 
   {/* Gallery*/}
   <section className="text-gray-600 body-font">

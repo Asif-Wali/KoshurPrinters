@@ -1,0 +1,31 @@
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.image{
+    object-fit: contain;
+    width: 240px;
+    height: 320px
+}
+
+
+.swiper-slide:nth-child(odd) {
+  background-color: #f5075e;
+}
+
+.swiper-slide:nth-child(even) {
+    background: #164e63
+}
+
