@@ -13,6 +13,6 @@
   }
   
   .scrollbar1::-webkit-scrollbar-thumb:hover {
-    background: pink; /* Color of the scrollbar thumb on hover */
+    background: rgb(208, 42, 70); /* Color of the scrollbar thumb on hover */
   }
   
