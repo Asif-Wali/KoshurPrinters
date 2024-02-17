@@ -34,7 +34,7 @@ const Navbar=()=>{
             </Disclosure.Button>
           </div>
           {/* Centered Buttons */}
-          <div className="flex  justify-evenly flex-1  sm:justify-between sm:items-center sm:ml-6 sm:block">
+          <div className="flex  justify-evenly flex-1  sm:justify-between sm:items-center  sm:ml-6 sm:block">
             <div className="hidden sm:flex space-x-8 justify-end " >
               <Link to="/about">
                 <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>About</button>
@@ -49,7 +49,7 @@ const Navbar=()=>{
                 <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><ShoppingCartIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 px-4 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
               </Link>
             <div className="flex-shrink-0 ml-auto">
-            <Link to="/profile">
+            <Link to="/login">
             <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'>
             <UserIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>
             </button>
@@ -91,7 +91,7 @@ const Navbar=()=>{
     >Cart
     </Disclosure.Button>
       </Link>
-      <Link to="/profile">
+      <Link to="/login">
         <Disclosure.Button
         className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
           block rounded-md px-3 py-2 text-base font-medium'>
