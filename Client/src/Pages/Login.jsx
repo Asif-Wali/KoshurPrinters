@@ -57,7 +57,7 @@ export const Login = () => {
                 onChange={(e) => setLoginDetails({...LoginDetails, password: e.target.value})} 
                 required={true} 
               />
-              <span className="absolute right-3">
+              <span className="absolute right-1">
                 {PasswordVisible?<EyeIcon className='w-12 z-10 text-Secondary  
                   block  px-3 py-2 text-base font-medium'
                   onClick={()=>{setPasswordVisible(!PasswordVisible)}}/>:<EyeSlashIcon className=' w-12 z-10 text-Secondary 
