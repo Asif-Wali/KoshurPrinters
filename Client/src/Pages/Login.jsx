@@ -2,13 +2,13 @@ import React,{useState}from 'react'
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 
 import { Link } from 'react-router-dom'
-
-export const Login = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const [LoginDetails, setLoginDetails]= useState({
+const initialState={
     email:"",
     password:"",
-  });
+}
+export const Login = () => {
+  const [isChecked, setIsChecked] = useState(false);
+  const [LoginDetails, setLoginDetails]= useState(initialState);
   const [PasswordVisible, setPasswordVisible]=useState(false);
 
 
@@ -19,6 +19,7 @@ export const Login = () => {
     e.preventDefault();
     let userdetails={...LoginDetails, isChecked};
     console.log(userdetails);
+    setLoginDetails(initialState);
     
   }
 
