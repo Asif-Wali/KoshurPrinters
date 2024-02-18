@@ -58,9 +58,9 @@ export const Login = () => {
                 required={true} 
               />
               <span className="absolute right-3">
-                {PasswordVisible?<EyeIcon className='w-12 z-10 text-black 
+                {PasswordVisible?<EyeIcon className='w-12 z-10 text-Secondary  
                   block  px-3 py-2 text-base font-medium'
-                  onClick={()=>{setPasswordVisible(!PasswordVisible)}}/>:<EyeSlashIcon className=' w-12 z-10 text-black 
+                  onClick={()=>{setPasswordVisible(!PasswordVisible)}}/>:<EyeSlashIcon className=' w-12 z-10 text-Secondary 
                 block  px-3 py-2 text-base font-medium'
                 onClick={()=>{setPasswordVisible(!PasswordVisible)}}/>}
               </span>
@@ -77,10 +77,10 @@ export const Login = () => {
           </div>
           <span className="ml-3 text-sm font-normal text-gray-900">Keep me logged in</span>
         </label>
-        <Link className="mr-4 text-sm font-medium text-cyan-800">Forgot password?</Link>
+        <Link to="/userforgotpassword"className="mr-4 text-sm font-medium font-bold text-cyan-800">Forgot password?</Link>
       </div>
       <button className="w-full px-6 py-4 my-5  font-bold leading-none text-white transition duration-300  md:w-96 bg-Primary border-0 focus:outline-none hover:bg-Secondary rounded text-lg" type='submit'>Sign In</button>
-      <p className="text-sm leading-relaxed text-gray-900">Not registered yet? <Link to="/register" className="font-bold text-Primary">Create an Account</Link></p>
+      <p className="text-sm leading-relaxed text-gray-900">Dont have an account? <Link to="/register" className="font-bold text-Primary">Create an Account</Link></p>
     </form>
   </div>
 </div>
