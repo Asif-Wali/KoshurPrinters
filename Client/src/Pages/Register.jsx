@@ -43,7 +43,7 @@ export const Register = () => {
             <div className="flex justify-center w-full h-full my-auto xl:gap-14 lg:justify-normal md:gap-5">
               <div className="flex items-center justify-center w-full lg:p-12">
                 <div className="flex items-center xl:p-10">
-                  <form className="flex flex-col w-full h-full pb-6 text-center p-24 my-4 bg-white shadow-lg rounded-3xl border-2 border-Primary" onSubmit={(e)=>HandleLogin(e)}>
+                  <form className="flex flex-col w-full h-full pb-6 text-center px-24 py-14 my-4 bg-white shadow-lg rounded-3xl border-2 border-Primary" onSubmit={(e)=>HandleLogin(e)}>
                     <h3 className="mb-8 text-4xl font-extrabold text-cyan-700">Sign Up</h3>
                     <Link className="flex items-center justify-center w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-white bg-gray-900 hover:bg-cyan-800  focus:ring-4 focus:ring-gray-300">
                       <img className="h-5 mr-2" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-google.png" alt="Google Icon"/>
