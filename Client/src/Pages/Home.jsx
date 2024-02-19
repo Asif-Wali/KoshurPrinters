@@ -63,7 +63,7 @@ useEffect(()=>{
     </div>
  {/* What is Screen Printing*/}
 
-    <div className="px-4 pt-6  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-2 lg:px-2 lg:py-4">
+    <div className="px-4 pt-6  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-2">
           <div className="flex items-center justify-center lg:pl-2 animate-moveFromLeft">
               <div className="flex flex-col items-end px-3">
@@ -109,9 +109,9 @@ useEffect(()=>{
     
  {/*Swiper Section*/}
            
- <div className="px-4 pb-10  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-16 lg:px-8 lg:py-16 ">
+ <div className="px-4 pb-10  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
  <div className="p-16 rounded shadow-xl sm:p-12">
-   <div className="flex flex-col lg:flex-row gap-6 ">
+   <div className="flex flex-col lg:flex-row gap-10 ">
      <div className="lg:mb-0 lg:w-1/2 lg:pr-2 items-center  flex items-center justify-center flex-col">
        <h1 className="font-sans text-4xl text-center font-bold tracking-tight text-Primary sm:text-4xl sm:leading-none">
        Behold our exquisite collection 
