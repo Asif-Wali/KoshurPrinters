@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect}from 'react'
 import { Link } from 'react-router-dom';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import ScreenPrinter from "../Images/ScreenPrinter.jpeg"
@@ -6,6 +6,14 @@ import HandBag from "../Images/WhatsApp Image 2024-02-15 at 16.57.25.jpeg"
 import Hoodies from "../Images/Hoodies.jpeg"
 
 export const Home = () => {
+
+
+useEffect(()=>{
+  // Scroll to the top of the screen
+  window.scrollTo({
+    top: 0,
+  })},[]);
+
 
   return (<div>
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">

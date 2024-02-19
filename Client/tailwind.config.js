@@ -44,8 +44,8 @@ module.exports = {
       },
     
       animation: {
-        'moveFromLeft': 'moveFromLeft 3s linear forwards',
-        'moveFromRight':  'moveFromRight 3s linear forwards',
+        'moveFromLeft': 'moveFromLeft 2s linear forwards',
+        'moveFromRight':  'moveFromRight 2s linear forwards',
         'moveFromBottom': 'moveFromBottom 6.5s linear forwards',
         'moveFromBottom2': 'moveFromBottom2 6.5s linear forwards',
       },
