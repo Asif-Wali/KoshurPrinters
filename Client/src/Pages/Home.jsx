@@ -2,8 +2,12 @@ import React, {useEffect}from 'react'
 import { Link } from 'react-router-dom';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import ScreenPrinter from "../Images/ScreenPrinter.jpeg"
-import HandBag from "../Images/WhatsApp Image 2024-02-15 at 16.57.25.jpeg"
-import Hoodies from "../Images/Hoodies.jpeg"
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import '../Styles/Swiper.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards } from 'swiper/modules';
+
 
 export const Home = () => {
 
@@ -59,7 +63,7 @@ useEffect(()=>{
     </div>
  {/* What is Screen Printing*/}
 
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 pt-6  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12">
           <div className="grid gap-10 lg:grid-cols-2">
           <div className="flex items-center justify-center lg:pl-8 animate-moveFromLeft">
               <div className="flex flex-col items-end px-3">
@@ -86,7 +90,7 @@ useEffect(()=>{
           <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg animate-moveFromRight">
             
               <div className="max-w-xl mb-6">
-                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                <h2 className="max-w-lg mb-6 font-sans text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                   What
                   <span className="inline-block mx-2 text-Primary">
                     Screen Printing
@@ -103,85 +107,93 @@ useEffect(()=>{
     </div>
     </div>
     
-
-  {/* Gallery*/}
-  <section className="text-gray-600 body-font">
-  <div className="container px-4 py-16 mx-auto">
-    <div className="flex flex-col text-center w-full mb-20">
-      <h1 className="sm:text-3xl text-4xl font-bold title-font mb-4 text-cyan-800">What we do?</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-justify">At our company, we specialize in bringing your designs to life on various surfaces, including textiles, mugs, bottles, bags, and more. From design consultation to precise ink mixing and meticulous printing, we handle every step with care and expertise. With our dedication to quality and attention to detail, we ensure that your custom printed products are not only visually stunning but also durable and long-lasting. Here, down below, is the sample of our work:-</p>
-    </div>
-    <div className="flex flex-wrap -m-4">
-      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom2">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom2">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom2">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={HandBag}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-      <div className="lg:w-1/3 sm:w-1/2 p-4 animate-moveFromBottom">
-        <div className="flex relative">
-          <img alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center" src={Hoodies}/>
-          <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0">
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-            <p className="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div className=' flex items-center justify-center'>
+ {/*Swiper Section*/}
+           
+ <div className="px-4 pb-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+ <div className="p-8 rounded shadow-xl sm:p-16">
+   <div className="flex flex-col lg:flex-row">
+     <div className="lg:mb-0 lg:w-1/2 lg:pr-5 ">
+       <h1 className="font-sans py-20 text-center text-4xl font-bold tracking-tight text-Primary sm:text-4xl sm:leading-none">
+       Behold our exquisite collection 
+         <br className="hidden  md:block" />
+         <span className='text-gray-900 inline-block mt-2' >  of top-selling designs,{' '}</span>
+         <span className="inline-block mt-2 text-cyan-800">
+         curated to captivate and inspire.
+         </span>
+       </h1>
+     </div>
+     <div className="lg:w-1/2 ">
+     <div className="flex justify-center items-center">
+     <Swiper 
+         effect={'cards'}
+         grabCursor={true}
+         modules={[EffectCards]}
+         className="mySwiper"
+       >
+         <SwiperSlide>
+         <div className='h-full w-full '>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full '>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full'>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full'>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full'>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full'>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full'>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full'>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full'>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+         <SwiperSlide>
+         <div className='h-full w-full'>
+         <img className="h-full w-full object-cover" src="https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png" alt='Best-Selling-1'/>
+         </div>
+         </SwiperSlide>
+   
+     </Swiper>
+   </div>
+     </div>
+   </div>
+ </div>
+</div>
+<div className=' flex items-center justify-center'>
     <Link to="/products">
       <button className="text-white animate-pulse bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center"> See More &#8594;
       </button>
     </Link> 
    </div>
-</section>
+
     </div>
       );
     };
