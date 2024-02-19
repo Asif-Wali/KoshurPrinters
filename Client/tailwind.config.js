@@ -44,10 +44,10 @@ module.exports = {
       },
     
       animation: {
-        'moveFromLeft': 'moveFromLeft 2s linear forwards',
-        'moveFromRight':  'moveFromRight 2s linear forwards',
-        'moveFromBottom': 'moveFromBottom 6.5s linear forwards',
-        'moveFromBottom2': 'moveFromBottom2 6.5s linear forwards',
+        'moveFromLeft': 'moveFromLeft 1s linear forwards',
+        'moveFromRight':  'moveFromRight 1s linear forwards',
+        'moveFromBottom': 'moveFromBottom 1.5s linear forwards',
+        'moveFromBottom2': 'moveFromBottom2 1.5s linear forwards',
       },
       colors: {
         'Secondary': '#658289',

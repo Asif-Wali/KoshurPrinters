@@ -63,9 +63,9 @@ useEffect(()=>{
     </div>
  {/* What is Screen Printing*/}
 
-    <div className="px-4 pt-6  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12">
+    <div className="px-4 pt-6  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-2 lg:px-2 lg:py-4">
           <div className="grid gap-10 lg:grid-cols-2">
-          <div className="flex items-center justify-center lg:pl-8 animate-moveFromLeft">
+          <div className="flex items-center justify-center lg:pl-2 animate-moveFromLeft">
               <div className="flex flex-col items-end px-3">
                 <img
                   className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
@@ -109,11 +109,11 @@ useEffect(()=>{
     
  {/*Swiper Section*/}
            
- <div className="px-4 pb-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
- <div className="p-8 rounded shadow-xl sm:p-16">
-   <div className="flex flex-col lg:flex-row">
-     <div className="lg:mb-0 lg:w-1/2 lg:pr-5 ">
-       <h1 className="font-sans py-20 text-center text-4xl font-bold tracking-tight text-Primary sm:text-4xl sm:leading-none">
+ <div className="px-4 pb-10  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-16 lg:px-8 lg:py-16 ">
+ <div className="p-16 rounded shadow-xl sm:p-12">
+   <div className="flex flex-col lg:flex-row gap-6 ">
+     <div className="lg:mb-0 lg:w-1/2 lg:pr-2 items-center  flex items-center justify-center flex-col">
+       <h1 className="font-sans text-4xl text-center font-bold tracking-tight text-Primary sm:text-4xl sm:leading-none">
        Behold our exquisite collection 
          <br className="hidden  md:block" />
          <span className='text-gray-900 inline-block mt-2' >  of top-selling designs,{' '}</span>
@@ -122,8 +122,8 @@ useEffect(()=>{
          </span>
        </h1>
      </div>
-     <div className="lg:w-1/2 ">
-     <div className="flex justify-center items-center">
+     <div className="lg:w-1/2">
+     <div className="flex justify-center items-center ">
      <Swiper 
          effect={'cards'}
          grabCursor={true}
@@ -189,10 +189,10 @@ useEffect(()=>{
 </div>
 <div className=' flex items-center justify-center'>
     <Link to="/products">
-      <button className="text-white animate-pulse bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center"> See More &#8594;
+      <button className="text-white animate-pulse bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center  mb-2 self-center"> See More &#8594;
       </button>
     </Link> 
-   </div>
+</div>
 
     </div>
       );
