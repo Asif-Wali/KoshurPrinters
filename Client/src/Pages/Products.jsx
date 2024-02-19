@@ -16,8 +16,6 @@ export const Products = () => {
 
     <h1 className=" text-white text-center font-bold text-4xl">This Page is Under Construction !</h1>
 </div>
-
-
 </div>
   )
 }
