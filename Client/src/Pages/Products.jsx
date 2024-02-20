@@ -24,12 +24,22 @@ export const Products = () => {
       {/*Accordian*/}
     
 
-    
-<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="tex bg-gray-900t-white w-full py-4 px-12 m-0 text-white  text-center font-semibold bg-gray-900 gap-3 font-medium  text-sm px-5 py-2.5 text-center flex items-center justify-center" type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ms-3 ${showOptions?"rotate-180":"rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-</svg>
+            <div className='w-full flex gap-2 justify-between px-2 py-2 items-center bg-gray-900'>
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className=" m-0 text-white  text-center  font-normal border-1 border-white bg-Primary gap-2   text-sm px-2 py-2  flex items-center justify-center rounded-lg" type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ${showOptions?"rotate-180":"rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
 
-</button>
+            </button>
+            <div className='flex justify-center gap-2 items-center '>
+            <input className=' relative w-full bg-white rounded-full border border-gray-700 focus:border-Primary focus:ring-2 focus:ring-Primary text-base outline-none text-Secondary  py-1 px-4 leading-8 transition-colors duration-200 ease-in-out'
+            placeholder="Type here to search.."/>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"    className="w-6 h-6 absolute z-2 right-4 text-Primary">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+
+          
+            </div>
+            </div>
 
 
 <div id="dropdown" className={`${showOptions?'' : 'hidden'} relative px-auto w-full divide-y divide-gray-100 shadow `}>
@@ -37,23 +47,23 @@ export const Products = () => {
     <ul className="py-2 px-4 text-sm text-gray-700 lg:flex justify-evenly  w-full " aria-labelledby="dropdownDefaultButton">
       <li className='m-2'>
         <button className="block px-4 py-2 w-full  text-white text-gray-3 bg-gray-900 hover:bg-Primary hover:text-white
-        block rounded-md  text-base font-medium ">T-Shirts</button> 
+        block rounded-md  text-base font-medium " onClick={ToggleOptionsVisibility} >T-Shirts</button> 
       </li>
       <li className='m-2'>
       <button className="block px-4 py-2 w-full  text-white text-gray-300 bg-gray-900 hover:bg-Primary hover:text-white
-        block rounded-md  text-base font-medium ">Hoodies</button>
+        block rounded-md  text-base font-medium" onClick={ToggleOptionsVisibility}>Hoodies</button>
       </li>
       <li className='m-2'>
       <button className="block px-4 py-2 w-full  text-white text-gray-300 bg-gray-900 hover:bg-Primary hover:text-white
-        block rounded-md  text-base font-medium ">Mugs</button>
+        block rounded-md  text-base font-medium" onClick={ToggleOptionsVisibility}>Mugs</button>
       </li>
       <li className='m-2'>
       <button className="block px-4 py-2 w-full  text-white text-gray-300 bg-gray-900 hover:bg-Primary hover:text-white
-        block rounded-md  text-base font-medium ">Bottles</button>
+        block rounded-md  text-base font-medium" onClick={ToggleOptionsVisibility}>Bottles</button>
       </li>
       <li className='m-2'>
       <button className="block px-4 py-2 w-full  text-white text-gray-300 bg-gray-900 hover:bg-Primary hover:text-white
-        block rounded-md  text-base font-medium ">Mouse Pads</button>
+        block rounded-md  text-base font-medium" onClick={ToggleOptionsVisibility}>Mouse Pads</button>
       </li>
     </ul>
     </div>
