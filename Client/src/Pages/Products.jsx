@@ -25,7 +25,7 @@ export const Products = () => {
     
 
     
-<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="tex bg-gray-900t-white w-full py-4 px-12 m-0 text-white  text-center font-semibold bg-gray-900 gap-3 font-medium  text-sm px-5 py-2.5 text-center flex items-center justify-center" type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ms-3 rotate-${showOptions?"180":"0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="tex bg-gray-900t-white w-full py-4 px-12 m-0 text-white  text-center font-semibold bg-gray-900 gap-3 font-medium  text-sm px-5 py-2.5 text-center flex items-center justify-center" type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ms-3 ${showOptions?"rotate-180":"rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
 </svg>
 
