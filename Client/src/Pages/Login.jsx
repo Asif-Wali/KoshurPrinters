@@ -76,9 +76,9 @@ export const Login = () => {
                           className={`w-5 h-5 border-2 rounded-md border-gray-700 ${isChecked ? 'bg-blue-500 border-0' : 'bg-white'}`}>
                           {isChecked ? <img className="" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/icons/check.png" alt="tick"/>:""}
                         </div>
-                        <span className="ml-3 text-sm font-normal text-gray-900">Keep me logged in</span>
+                        <span className="ml-2 text-sm font-normal text-gray-900">Keep me logged in</span>
                       </label>
-                      <Link to="/userforgotpassword"className="mr-4 text-sm font-medium font-bold text-cyan-800">Forgot password?</Link>
+                      <Link to="/userforgotpassword" className=" text-sm font-medium font-bold text-cyan-800">Forgot password?</Link>
                     </div>
                     <button className="w-full px-6 py-4 my-5  font-bold leading-none text-white transition duration-300  md:w-96 bg-Primary border-0 focus:outline-none hover:bg-Secondary rounded text-lg" type='submit'>Sign In</button>
                     <p className="text-sm leading-relaxed text-gray-900">Dont have an account? <Link to="/register" className="font-bold text-Primary">Create an Account</Link></p>
