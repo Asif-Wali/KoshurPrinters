@@ -67,7 +67,12 @@ export const Products = () => {
         <div className="flex flex-wrap -m-4">
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">
-            
+            <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
+            <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
+            </div>
+
            
               
             
@@ -75,31 +80,52 @@ export const Products = () => {
           </div>
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">
-              
-              
-            </div>
-          </div>
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex relative">
-             
+                <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
+                <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
+                </div>
               
             </div>
           </div>
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">
+            <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
+            <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
+            </div>
               
+            </div>
+          </div>
+          <div className="lg:w-1/3 sm:w-1/2 p-4">
+            <div className="flex relative">
+              
+                <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
+                <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
+                </div>
               </div>
           </div>
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">
             
-              
+            <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
+            <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
+            </div>
             </div>
           </div>
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">
               
-              
+            <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
+            <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
+            </div>
             </div>
           </div>
         </div>
