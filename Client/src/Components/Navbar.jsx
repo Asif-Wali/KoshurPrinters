@@ -96,7 +96,7 @@ const Navbar=()=>{
         className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
           block rounded-md px-3 py-2 text-base font-medium'>
       {/**Conditional Rendering**/}
-      Profile
+      Login
       </Disclosure.Button>
       </Link>
         </div>
