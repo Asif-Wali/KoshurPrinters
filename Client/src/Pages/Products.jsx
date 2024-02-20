@@ -31,8 +31,8 @@ export const Products = () => {
 
             </button>
             <div className='w-full flex relative justify-center items-center '>
-            <input className=' w-full bg-white rounded-full border border-gray-700 focus:border-Primary focus:ring-2 focus:ring-Primary text-xs outline-none text-Secondary  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-            placeholder="Type here to search.."
+            <input className=' w-full bg-white rounded-lg border border-gray-700 focus:border-Primary focus:ring-2 focus:ring-Primary text-base outline-none text-Secondary  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out '
+            placeholder="Search here.."
             />
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"    className="w-6 h-6 absolute z-2 right-2 text-Primary">
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
