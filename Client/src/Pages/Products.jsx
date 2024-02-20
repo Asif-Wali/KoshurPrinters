@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
-
+import { ProductCard } from '../Components/ProductCard';
 
 
 export const Products = () => {
@@ -10,6 +10,7 @@ export const Products = () => {
     const ToggleOptionsVisibility=()=>{
       setShowOptions(!showOptions);
     }
+    const arr= [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 
 
   useEffect(()=>{
@@ -20,18 +21,18 @@ export const Products = () => {
 
   
 
-      return<section className="text-gray-600 body-font overflow-x-hidden">
+      return<div className="text-gray-600 body-font overflow-x-hidden w-full">
       {/*Accordian*/}
     
 
-            <div className='w-full flex gap-2 justify-evenly px-2 py-2 items-center bg-gray-900'>
-            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="w-full text-white  text-center  font-normal border border-white bg-Primary gap-1  text-sm  py-2  flex items-center justify-center rounded-lg" type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ${showOptions?"rotate-180":"rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <div className='w-full flex gap-2 justify-evenly px-2 py-2 items-center bg-gray-700'>
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className={`w-full text-white ${showOptions? "bg-Primary" : "bg-gray-900"} text-center  font-normal border border-white  gap-4  text-sm  py-2  flex items-center justify-center rounded-lg`} type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ${showOptions?"rotate-180":"rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
 
             </button>
             <div className='w-full flex relative justify-center items-center '>
-            <input className=' w-full bg-white rounded-lg border border-gray-700 focus:border-Primary focus:ring-2 focus:ring-Primary text-base outline-none text-Secondary  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out '
+            <input className=' w-full bg-white rounded-full border border-gray-700 focus:border-Primary focus:ring-2 focus:ring-Primary text-base outline-none text-Secondary  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out '
             placeholder="Search here.."
             />
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"    className="w-6 h-6 absolute z-2 right-2 text-Primary">
@@ -71,75 +72,15 @@ export const Products = () => {
 </div>
 
     {/*Accordian*/}
-      <div className="container px-5 py-16 mx-auto">
-        <div className="flex flex-col text-center w-full mb-4">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Products</h1> 
+      <div className="px-6 py-16 flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col text-center w-full p-4 mb-4">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font  text-gray-900">Products</h1> 
         </div>
-        <div className="flex flex-wrap -m-4">
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex relative">
-            <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
-            <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
-            </div>
-
-           
-              
-            
-            </div>
-          </div>
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex relative">
-                <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
-                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
-                <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
-                </div>
-              
-            </div>
-          </div>
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex relative">
-            <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
-            <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
-            </div>
-              
-            </div>
-          </div>
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex relative">
-              
-                <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
-                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
-                <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
-                </div>
-              </div>
-          </div>
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex relative">
-            
-            <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
-            <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
-            </div>
-            </div>
-          </div>
-          <div className="lg:w-1/3 sm:w-1/2 p-4">
-            <div className="flex relative">
-              
-            <div class="px-8 py-10 relative  w-full border-4 border-gray-200 bg-white">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Gulmarg Gondola</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">T-Shirt</h1>
-            <p class="leading-relaxed">quality t-shirt with a unique blend of our kashmiri tradition.</p>
-            </div>
-            </div>
-          </div>
+        <div className="grid gap-8 py-8 px-4 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4  border-2 border-Primary">
+          {arr.map((i)=>{
+            return<ProductCard key={i}/>
+          })}
         </div>
       </div>
-    </section>
+    </div>
 }
