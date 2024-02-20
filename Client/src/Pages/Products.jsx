@@ -24,16 +24,17 @@ export const Products = () => {
       {/*Accordian*/}
     
 
-            <div className='w-full flex  justify-between px-2 py-2 items-center bg-gray-900'>
+            <div className='w-full flex  justify-evenly px-2 py-2 items-center bg-gray-900'>
             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className=" m-0 text-white  text-center  font-normal border border-white bg-Primary gap-1   text-sm px-2 py-2  flex items-center justify-center rounded-lg" type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ${showOptions?"rotate-180":"rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
 
             </button>
-            <div className='flex justify-center gap-2 items-center '>
-            <input className=' relative w-full bg-white rounded-full border border-gray-700 focus:border-Primary focus:ring-2 focus:ring-Primary text-base outline-none text-Secondary  py-1 px-2 leading-8 transition-colors duration-200 ease-in-out'
-            placeholder="Type here to search.."/>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"    className="w-6 h-6 absolute z-2 right-4 text-Primary">
+            <div className='flex relative justify-center items-center '>
+            <input className=' w-full bg-white rounded-full border border-gray-700 focus:border-Primary focus:ring-2 focus:ring-Primary text-base outline-none text-Secondary  py-1 px-2 leading-8 transition-colors duration-200 ease-in-out'
+            placeholder="Type here to search.."
+            />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"    className="w-6 h-6 absolute z-2 right-2 text-Primary">
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
 
