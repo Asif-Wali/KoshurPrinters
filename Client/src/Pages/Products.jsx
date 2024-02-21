@@ -76,7 +76,7 @@ export const Products = () => {
         <div className="flex flex-col text-center w-full p-4 mb-4">
           <h1 className="sm:text-3xl text-2xl font-medium title-font  text-gray-900">Products</h1> 
         </div>
-        <div className="grid gap-8 py-8 px-4 grid-cols-2 sm:grid-cols-3  lg:grid-cols-3  border-2 border-Primary">
+        <div className="grid gap-4 py-8 px-4 grid-cols-2  sm:gap-6 lg:gap-8 sm:grid-cols-3  lg:grid-cols-3 ">
           {arr.map((i)=>{
             return<ProductCard key={i}/>
           })}
