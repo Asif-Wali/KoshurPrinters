@@ -72,7 +72,7 @@ export const Products = () => {
 </div>
 
     {/*Accordian*/}
-      <div className="px-4 py-16 flex flex-col items-center justify-center w-full">
+      <div className="px-1 py-16 flex flex-col items-center justify-center w-full">
         <div className="flex flex-col text-center w-full p-4 mb-4">
           <h1 className="sm:text-3xl text-2xl font-medium title-font  text-gray-900">Products</h1> 
         </div>
