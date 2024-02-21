@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import { ProductCard } from '../Components/ProductCard';
+import { CircularPagination } from '../Components/Pagination';
 
 
 export const Products = () => {
@@ -82,5 +83,6 @@ export const Products = () => {
           })}
         </div>
       </div>
+      <div className='flex items-center justify-center py-4 px-4'><CircularPagination/></div>
     </div>
 }

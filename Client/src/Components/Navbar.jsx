@@ -37,16 +37,16 @@ const Navbar=()=>{
           <div className="flex  justify-evenly flex-1  sm:justify-between sm:items-center  sm:ml-6 sm:block">
             <div className="hidden sm:flex space-x-8 justify-end " >
               <Link to="/about">
-                <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>About</button>
+                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>About</button>
               </Link>
               <Link to="/contactUs">
-                <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>Contact Us</button>
+                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>Contact Us</button>
               </Link>
               <Link to="/products">
-                <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>Products</button>
+                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>Products</button>
               </Link>
               <Link to="/cart">
-                <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><ShoppingCartIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 px-4 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
+                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><ShoppingCartIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 px-4 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
               </Link>
             <div className="flex-shrink-0 ml-auto">
             <Link to="/login">
