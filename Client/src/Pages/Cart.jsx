@@ -7,7 +7,7 @@ export const Cart = () => {
   const arr = [1,2,3,4,5] 
 
   return (<div className="relative  mb-16">
-            <div  className='cart-heading border-2 border-Primary p-4 bg-[#d9e7e2]'>
+            <div  className='cart-heading p-4 bg-[#d9e7e2]'>
             {/*heading*/}
               <div className='p-4 bg-cyan-800 rounded-lg text-center'>
               <h1 className=' text-xl text-white flex items-center gap-2 justify-center'><ShoppingCartIcon className='h-6 w-6 mt-1 text-white'/> Cart ({arr.length}) </h1>
