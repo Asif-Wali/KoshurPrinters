@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { ShoppingBagIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import { Rating } from "@material-tailwind/react";
-import "../Styles/ProductPage.css"
+
  
 
 
@@ -38,7 +38,7 @@ export const ProductCard = () => {
           </button>
     </Link>
     <Link to="/checkout">
-          <button   class=" w-full flex items-center justify-center rounded-md bg-cyan-700 gap-2 py-2 text-center text-xs  text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+          <button   class=" w-full flex items-center justify-center rounded-md bg-cyan-800 gap-2 py-2 text-center text-xs  text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
            Buy Now
            <ShoppingBagIcon className="h-4 items-center font-medium	justify-center rounded-md "/>
           </button>

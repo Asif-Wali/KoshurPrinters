@@ -1,20 +1,12 @@
-import React, {useState} from "react";
-import { Button, IconButton } from "@material-tailwind/react";
+import React,{useState} from "react";
+import { IconButton, Typography } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
  
-export function CircularPagination() {
-  const [active, setActive]=useState(1);
- 
-  const getItemProps = (index) =>
-    ({
-      variant: active === index ? "filled" : "text",
-      color: "gray",
-      onClick: () => setActive(index),
-      className: "rounded-full",
-    });
+export function Pagination() {
+  const [active, setActive] = useState(1);
  
   const next = () => {
-    if (active === 5) return;
+    if (active === 10) return;
  
     setActive(active + 1);
   };
@@ -26,31 +18,27 @@ export function CircularPagination() {
   };
  
   return (
-    <div className="flex items-center gap-4">
-      <Button
-        variant="text"
-        className="flex items-center gap-2 rounded-full"
+    <div className="flex items-center gap-8">
+      <IconButton
+        size="sm"
+        variant="outlined"
         onClick={prev}
         disabled={active === 1}
       >
-        <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" /> Previous
-      </Button>
-      <div className="flex items-center gap-2">
-        <IconButton {...getItemProps(1)}>1</IconButton>
-        <IconButton {...getItemProps(2)}>2</IconButton>
-        <IconButton {...getItemProps(3)}>3</IconButton>
-        <IconButton {...getItemProps(4)}>4</IconButton>
-        <IconButton {...getItemProps(5)}>5</IconButton>
-      </div>
-      <Button
-        variant="text"
-        className="flex items-center gap-2 rounded-full"
+        <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" />
+      </IconButton>
+      <Typography color="gray" className="font-normal">
+        Page <strong className="text-gray-900">{active}</strong> of{" "}
+        <strong className="text-gray-900">10</strong>
+      </Typography>
+      <IconButton
+        size="sm"
+        variant="outlined"
         onClick={next}
-        disabled={active === 5}
+        disabled={active === 10}
       >
-        Next
         <ArrowRightIcon strokeWidth={2} className="h-4 w-4" />
-      </Button>
+      </IconButton>
     </div>
   );
 }
