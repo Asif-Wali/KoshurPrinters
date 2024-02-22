@@ -70,22 +70,11 @@ export const Products = () => {
     </div>
       </div>
     {/*Accordian*/}
-      <div className="px-1 pt-4 py-4 flex flex-col items-center justify-center w-full">
-        <div className="flex flex-col text-center w-full p-4 mb-2">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-800">Products</h1> 
-          
-            <form class="max-w-sm mx-auto">
-            <label for="Sorting" class="block mb-2 text-sm font-medium text-gray-900 ">Sort by Price</label>
-                <select id="Sorting" class="bg-gray-50 border border-Primary text-gray-900 text-sm rounded-lg focus:ring-cyan-700 focus:border-cyan-700 block w-full p-2 focus:outline-none">
-                      <option value="" disabled selected>Select to Sort</option>
-                      <option value="" >Clear Sort</option>
-                      <option value="asc">Price Low to High </option>
-                      <option value="desc">Price High to Low</option>   
-                </select>
-            </form>
-
+      <div className="px-1 my-4 flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col text-center w-full p-4">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-800">Products</h1> 
         </div>
-        <div className="grid gap-2 py-4 px-2 mt-6 sm:px-4 grid-cols-2  sm:gap-6 lg:gap-8 sm:grid-cols-3  lg:grid-cols-3 ">
+        <div className="grid gap-2 py-4 px-2  sm:px-4 grid-cols-2  sm:gap-6 lg:gap-8 sm:grid-cols-3  lg:grid-cols-3 ">
           {arr.map((i)=>{
             return<ProductCard key={i}/>
           })}
