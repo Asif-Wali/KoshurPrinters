@@ -14,19 +14,14 @@ export const Products = () => {
     const arr= [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 
 
-  useEffect(()=>{
-            // Scroll to the top of the screen
-            window.scrollTo({top: 0})
-  },[]);
+  // useEffect(()=>{
+  //           // Scroll to the top of the screen
+  //           window.scrollTo({top: 0})
+  // },[]);
 
-
-  
-
-      return<div className="text-gray-600 body-font overflow-x-hidden w-full">
-      {/*Accordian*/}
-    
-
-            <div className='w-full flex gap-2 justify-evenly px-2 py-2 items-center bg-gray-600'>
+  return<div className="text-gray-600 body-font overflow-x-hidden w-full">
+    {/*Accordian*/}
+      <div className='w-full flex gap-2 justify-evenly px-2 py-2 items-center bg-gray-600'>
             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className={`w-full text-white ${showOptions? "bg-Primary" : "bg-gray-900"} text-center  font-normal border border-white  gap-4  text-sm  py-2  flex items-center justify-center rounded-lg`} type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ${showOptions?"rotate-180":"rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
@@ -42,12 +37,14 @@ export const Products = () => {
 
           
             </div>
-            </div>
-
-
-<div id="dropdown" className={`${showOptions?'' : 'hidden'} relative px-auto w-full divide-y divide-gray-100 shadow `}>
+      </div>
+      <div id="dropdown" className={`${showOptions?'' : 'hidden'} relative px-auto w-full divide-y divide-gray-100 shadow `}>
 <div className='absolute z-10 bg-cyan-600 rounded-b-lg  w-full '>
     <ul className="py-2 px-4 text-sm text-gray-700 lg:flex justify-evenly  w-full " aria-labelledby="dropdownDefaultButton">
+    <li className='m-2'>
+      <button className="block px-4 py-2 w-full  text-white text-gray-300 bg-gray-900 hover:bg-Primary hover:text-white
+        block rounded-md  text-base font-medium" onClick={ToggleOptionsVisibility}>All</button>
+      </li>
       <li className='m-2'>
         <button className="block px-4 py-2 w-full  text-white text-gray-3 bg-gray-900 hover:bg-Primary hover:text-white
         block rounded-md  text-base font-medium " onClick={ToggleOptionsVisibility} >T-Shirts</button> 
@@ -68,13 +65,13 @@ export const Products = () => {
       <button className="block px-4 py-2 w-full  text-white text-gray-300 bg-gray-900 hover:bg-Primary hover:text-white
         block rounded-md  text-base font-medium" onClick={ToggleOptionsVisibility}>Mouse Pads</button>
       </li>
+      
     </ul>
     </div>
-</div>
-
+      </div>
     {/*Accordian*/}
-      <div className="px-1 py-16 flex flex-col items-center justify-center w-full">
-        <div className="flex flex-col text-center w-full p-4 mb-4">
+      <div className="px-1 pt-4 py-4 flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col text-center w-full p-4 mb-2">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-800">Products</h1> 
           
             <form class="max-w-sm mx-auto">
@@ -88,12 +85,12 @@ export const Products = () => {
             </form>
 
         </div>
-        <div className="grid gap-2 py-8 px-2 mt-6 sm:px-4 grid-cols-2  sm:gap-6 lg:gap-8 sm:grid-cols-3  lg:grid-cols-3 ">
+        <div className="grid gap-2 py-4 px-2 mt-6 sm:px-4 grid-cols-2  sm:gap-6 lg:gap-8 sm:grid-cols-3  lg:grid-cols-3 ">
           {arr.map((i)=>{
             return<ProductCard key={i}/>
           })}
         </div>
       </div>
       <div className='flex items-center justify-center py-4 px-4'><Pagination className="m-8"/></div>
-    </div>
+      </div>
 }
