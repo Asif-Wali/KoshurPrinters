@@ -14,10 +14,10 @@ export const Products = () => {
     const arr= [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 
 
-  // useEffect(()=>{
-  //           // Scroll to the top of the screen
-  //           window.scrollTo({top: 0})
-  // },[]);
+  useEffect(()=>{
+            // Scroll to the top of the screen
+            window.scrollTo({top: 0})
+  },[]);
 
   return<div className="text-gray-600 body-font overflow-x-hidden w-full">
     {/*Accordian*/}
