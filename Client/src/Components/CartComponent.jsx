@@ -13,7 +13,7 @@ export const CartComponent = () => {
     }
 
   return (
-    <div className='bg-white rounded-lg  w-full'>
+    <div className='bg-white rounded-lg shadow-md w-full'>
                     <div className=' px-2 flex items-center justify-start'>
                         <div className='p-4'>
                           <img className='h-24 rounded' src='https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png' alt='cartProduct'/>
