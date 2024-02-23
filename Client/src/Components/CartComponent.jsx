@@ -14,12 +14,12 @@ export const CartComponent = () => {
 
   return (
     <div className='bg-white rounded-lg  w-full lg:w-3/5'>
-                    <div className=' px-2 flex items-center justify-between'>
+                    <div className=' px-2 flex items-center justify-start'>
                         <div className='p-4'>
                           <img className='h-24 rounded' src='https://dcassetcdn.com/design_img/22773/30063/30063_498839_22773_image.png' alt='cartProduct'/>
                         </div>
                         <div className='p-5'>
-                            <h4 className=' font-bold'>Blue Shikara</h4>
+                            <h4 className='font-bold'>Blue Shikara</h4>
                             <p className='text-md'>T-shirt</p>
                             <h3 className='text-md'>Price</h3>
                         </div>
@@ -30,7 +30,7 @@ export const CartComponent = () => {
                         <PlusIcon className='h-4 ring-1 rounded ring-gray-500 text-[green]' onClick={()=>{
                             HandleIncrement()
                         }}/>
-                        <span className='text-gray-500 mx-2'>{count}</span>
+                        <p className='text-gray-500 mx-2'>{count}</p>
                         <MinusIcon className='h-4 ring-1 rounded ring-gray-500 text-yellow-700' onClick={()=>{
                             HandleDecrement()
                         }}/>
