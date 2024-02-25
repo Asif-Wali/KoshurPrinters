@@ -3,9 +3,11 @@ import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import PhoneInput from 'react-phone-number-input';
 import "react-phone-number-input/style.css";
 import "../Styles/PhoneNumberInput.css";
-
-
-import { Link } from 'react-router-dom'
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { registerRoute } from '../Utilities/APIRoutes';
+import { Link, useNavigate } from 'react-router-dom'
 
 const initialState={
   name:"",
@@ -25,12 +27,11 @@ const initialState={
 
 export const Register = () => {
   const [isChecked, setIsChecked] = useState(false);
-  
   const [isFocused, setIsFocused] = useState(false); // to change color of the border of phone input
-
   const [signUpDetails, setsignUpDetails]= useState(initialState);
   const [PasswordVisible, setPasswordVisible]=useState(false);
   const [ConfirmPasswordVisible, setConfirmPasswordVisible]=useState(false);
+  const Navigate= useNavigate();
   useEffect(()=>{
     // Scroll to the top of the screen
     window.scrollTo({
@@ -38,7 +39,31 @@ export const Register = () => {
     });
     
       },[]);
-
+  const ToastStyling ={
+        position:"top-center",
+                autoClose: 3000,
+                pauseOnHover: true,
+                draggable: true,
+                theme:"dark"
+    
+    };
+    const HandleValidation=(values)=>{
+      const {name, password, confirmPassword}=values;
+      if(password!==confirmPassword){
+          toast.error("Password and Confirm Password should be same.",ToastStyling);
+        return false;
+      }
+      else if(name.length <= 3){
+          toast.error("Username should be greater than 3 Characters.", ToastStyling);
+          return false;
+      }
+      else if(password.length < 6){
+          toast.error("Password length should be greater than or Equal to 6.",ToastStyling)
+          return false;
+      }
+      return true;
+  }
+    
   const HandleFocus = () => {
     setIsFocused(true);
   };
@@ -48,12 +73,31 @@ export const Register = () => {
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
-  const HandleLogin=(e)=>{
+  const HandleLogin= async(e)=>{
     e.preventDefault();
-    let userdetails={...signUpDetails, isChecked};
-    console.log(userdetails);
-    setsignUpDetails(initialState);
+
     
+    let userdetails={...signUpDetails, isChecked};
+    
+    if(HandleValidation(userdetails)){
+      try {
+        const{data}= await axios.post(registerRoute, userdetails);
+        console.log(data);
+        if(data.status===false){
+          toast.error(data.msg, ToastStyling);
+        }
+        else if(data.status===true){
+          toast.success(data.msg, ToastStyling);
+          Navigate("/login");
+
+        }
+      } catch (error) {
+        console.log(error);
+        toast.error("Couldn't connect with the Backend", ToastStyling)
+      }
+      console.log(userdetails);
+      setsignUpDetails(initialState);
+    }  
   }
 
   return (<div className="bg-white py-10">
@@ -234,6 +278,7 @@ export const Register = () => {
               </div>
             </div>
           </div>
+          <ToastContainer/>
         </div>
 
 

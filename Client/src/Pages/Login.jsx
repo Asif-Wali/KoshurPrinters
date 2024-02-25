@@ -1,25 +1,60 @@
 import React,{useState}from 'react'
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
-
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom'
+import { loginRoute } from '../Utilities/APIRoutes';
 const initialState={
     email:"",
     password:"",
 }
 export const Login = () => {
-  const [isChecked, setIsChecked] = useState(false);
   const [LoginDetails, setLoginDetails]= useState(initialState);
   const [PasswordVisible, setPasswordVisible]=useState(false);
+  const ToastStyling ={
+            position:"top-center",
+            autoClose: 3000,
+            pauseOnHover: true,
+            draggable: true,
+            theme:"dark"
 
+};
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
-  const HandleLogin=(e)=>{
+const HandleValidation=(values)=>{
+const {password}=values;
+if(password.length<6){
+  toast.error("Password Length should be greater than 6 characters", ToastStyling);
+  return false;
+}
+return true;
+
+}
+
+  const HandleLogin= async (e)=>{
     e.preventDefault();
-    let userdetails={...LoginDetails, isChecked};
-    console.log(userdetails);
-    setLoginDetails(initialState);
+    let userdetails={...LoginDetails};
+    if(HandleValidation(userdetails)){
+      try {
+        const {data}= await axios.post(loginRoute,userdetails);
+        if(data.status===false){
+          toast.error(data.msg, ToastStyling);
+        }
+        else if(data.status===true){
+          toast.success(data.msg, ToastStyling);
+          console.log(userdetails);
+          setLoginDetails(initialState);
+
+        }
+      console.log(data);
+      } catch (error) {
+        toast.error("Error from the Backend");
+        console.log(error);
+      }
+    }
+   
+    
+   
     
   }
 
@@ -68,16 +103,7 @@ export const Login = () => {
                           </div>
                       </div>
                     <div className="flex flex-row justify-between mb-2">
-                      <label className="relative inline-flex items-center mr-3 cursor-pointer">
-                        <input type="checkbox" checked={isChecked}
-                        onChange={handleCheckboxChange} className="sr-only peer"/>
-                        
-                        <div
-                          className={`w-5 h-5 border-2 rounded-md border-gray-700 ${isChecked ? 'bg-blue-500 border-0' : 'bg-white'}`}>
-                          {isChecked ? <img className="" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/icons/check.png" alt="tick"/>:""}
-                        </div>
-                        <span className="ml-2 text-sm font-normal text-gray-900">Keep me logged in</span>
-                      </label>
+                      
                       <Link to="/userforgotpassword" className=" text-sm font-medium font-bold text-cyan-800">Forgot password?</Link>
                     </div>
                     <button className="w-full px-6 py-4 my-5  font-bold leading-none text-white transition duration-300  md:w-96 bg-Primary border-0 focus:outline-none hover:bg-Secondary rounded text-lg" type='submit'>Sign In</button>
@@ -87,6 +113,7 @@ export const Login = () => {
               </div>
             </div>
           </div>
+          <ToastContainer/>
         </div>
 
 

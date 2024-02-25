@@ -38,8 +38,8 @@ export const Products = () => {
           
             </div>
       </div>
-      <div id="dropdown" className={`${showOptions?'' : 'hidden'} relative px-auto w-full divide-y divide-gray-100 shadow `}>
-<div className='absolute z-10 bg-cyan-600 rounded-b-lg  w-full '>
+      <div id="dropdown" className={`${showOptions?'' : 'hidden'}  relative px-auto w-full divide-y divide-gray-100 shadow`}>
+    <div className={`absolute z-10 bg-cyan-600 rounded-b-lg  w-full transform ${showOptions ? 'translate-x-0' : '-translate-x-full'} transition-transform ease-in-out`}>
     <ul className="py-2 px-4 text-sm text-gray-700 lg:flex justify-evenly  w-full " aria-labelledby="dropdownDefaultButton">
     <li className='m-2'>
       <button className="block px-4 py-2 w-full  text-white text-gray-300 bg-gray-900 hover:bg-Primary hover:text-white
