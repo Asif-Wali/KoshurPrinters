@@ -40,8 +40,8 @@ export const Register = () => {
     
       },[]);
   const ToastStyling ={
-        position:"top-center",
-                autoClose: 3000,
+        position:"bottom-center",
+                autoClose: 2500,
                 pauseOnHover: true,
                 draggable: true,
                 theme:"dark"
@@ -88,7 +88,7 @@ export const Register = () => {
         }
         else if(data.status===true){
           toast.success(data.msg, ToastStyling);
-          Navigate("/login");
+          Navigate("/");
 
         }
       } catch (error) {

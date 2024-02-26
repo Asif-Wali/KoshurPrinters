@@ -1,10 +1,27 @@
 import React from 'react'
 import { Disclosure,} from '@headlessui/react'
 import { Link } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, ShoppingCartIcon, UserIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, ShoppingCartIcon, UserIcon, MoonIcon, SunIcon} from '@heroicons/react/24/outline'
 import Logo from "../Images/logo512.png";
+import { useDispatch, useSelector } from 'react-redux';
+import { ToggleTheme } from '../Redux/AppReducer/Action';
+
 
 const Navbar=()=>{
+  const auth=useSelector((store)=>store.isAuth)
+  const theme=useSelector((store)=>store.theme)
+  const Dispatch= useDispatch();
+  console.log(auth);
+  console.log(theme);
+   
+  const ChangeTheme=()=>{
+    if(theme==="light"){
+      Dispatch(ToggleTheme("dark"));
+    }
+    else{
+      Dispatch(ToggleTheme("light"));
+    }
+  }
 
   return<Disclosure as="nav" className="  bg-cyan-600 w-full">
   {({ open }) => (
@@ -48,13 +65,23 @@ const Navbar=()=>{
               <Link to="/cart">
                 <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><ShoppingCartIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 px-4 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
               </Link>
-            <div className="flex-shrink-0 ml-auto">
-            <Link to="/login">
-            <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'>
-            <UserIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>
-            </button>
-            </Link>
-            </div>
+
+              <div className="flex-shrink-0 ml-auto">
+                <Link to={auth?"/profile":"/login"}>
+              <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'>
+              <UserIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>
+              </button>
+                </Link>
+              </div>
+              <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary' onClick={()=>{ ChangeTheme()}}>
+              {(theme==="light")?
+                <SunIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white" />:
+             
+                <MoonIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white" />
+              }
+            
+              </button>
+
             </div>
             
           </div>
@@ -64,11 +91,12 @@ const Navbar=()=>{
       <Disclosure.Panel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
         <Link to="/about">
-        <Disclosure.Button
+          <Disclosure.Button
         className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
           block rounded-md px-3 py-2 text-base font-medium'
       >About
-      </Disclosure.Button>
+          </Disclosure.Button>
+          
       </Link>
       <Link to="/contactUs">
         <Disclosure.Button
@@ -91,15 +119,22 @@ const Navbar=()=>{
     >Cart
     </Disclosure.Button>
       </Link>
-      <Link to="/login">
+      <Link to={auth?"/profile":"/login"}>
         <Disclosure.Button
         className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
           block rounded-md px-3 py-2 text-base font-medium'>
       {/**Conditional Rendering**/}
-      Login
+     {auth?"Profile":"Login"}
       </Disclosure.Button>
       </Link>
-        </div>
+            {/*theme*/}
+      <Disclosure.Button 
+      className='bg-gray-900 mb-2 w-full text-white text-gray-300 hover:bg-Primary hover:text-white
+        block rounded-md px-3 py-2 text-base font-medium' onClick={()=>{ ChangeTheme()}}>
+        {/**Conditional Rendering**/}
+        {theme==="light"?"Light":"Dark"}
+      </Disclosure.Button>
+      </div>
       </Disclosure.Panel>
     </>
   )}

@@ -15,8 +15,8 @@ export const Cart = () => {
               {/*body*/}
               <div className='cart-container w-full p-2  lg:flex lg:gap-8'>
                 <div className='cart-detail rounded flex flex-col gap-2 my-2 w-full'>
-                  {arr.map((el)=>{
-                    return<CartComponent/>
+                  {arr.map((el,i)=>{
+                    return<CartComponent key={i}/>
                   })}
 
                 </div>

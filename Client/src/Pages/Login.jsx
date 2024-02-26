@@ -1,25 +1,44 @@
-import React,{useState}from 'react'
+import React,{useState, useEffect}from 'react'
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { loginRoute } from '../Utilities/APIRoutes';
+import { useDispatch, useSelector } from 'react-redux';
+
+import {  } from 'react-redux';
 const initialState={
     email:"",
     password:"",
-}
+};
 export const Login = () => {
   const [LoginDetails, setLoginDetails]= useState(initialState);
   const [PasswordVisible, setPasswordVisible]=useState(false);
+  const Navigate= useNavigate();
+  const auth=useSelector((store)=>store.isAuth)
+  console.log(auth);
   const ToastStyling ={
-            position:"top-center",
-            autoClose: 3000,
+            position:"bottom-center",
+            autoClose: 2500,
             pauseOnHover: true,
             draggable: true,
             theme:"dark"
 
 };
+const NavigateToProfile=(auth)=>{
+  if(auth===true){
+   
+    Navigate("/profile");
+   };
+   
+}
+useEffect(()=>{
+ 
+ NavigateToProfile(auth);
+},[])
+
+
 
 const HandleValidation=(values)=>{
 const {password}=values;
@@ -36,17 +55,16 @@ return true;
     let userdetails={...LoginDetails};
     if(HandleValidation(userdetails)){
       try {
-        const {data}= await axios.post(loginRoute,userdetails);
+        // const {data}= await axios.post(loginRoute,userdetails);
+        const {data} = await axios.post("http://localhost:5000/api/auth/login",userdetails)
+        
         if(data.status===false){
           toast.error(data.msg, ToastStyling);
         }
         else if(data.status===true){
           toast.success(data.msg, ToastStyling);
-          console.log(userdetails);
           setLoginDetails(initialState);
-
         }
-      console.log(data);
       } catch (error) {
         toast.error("Error from the Backend");
         console.log(error);
