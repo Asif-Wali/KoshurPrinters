@@ -1,7 +1,7 @@
 import React from 'react'
 import { Disclosure,} from '@headlessui/react'
 import { Link } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, ShoppingCartIcon, UserIcon, MoonIcon, SunIcon} from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, ShoppingCartIcon,  MoonIcon, SunIcon, PowerIcon, UserCircleIcon, InformationCircleIcon, PhoneIcon, BuildingStorefrontIcon} from '@heroicons/react/24/outline'
 import Logo from "../Images/logo512.png";
 import { useDispatch, useSelector } from 'react-redux';
 import { ToggleTheme } from '../Redux/AppReducer/Action';
@@ -53,34 +53,36 @@ const Navbar=()=>{
           {/* Centered Buttons */}
           <div className="flex  justify-evenly flex-1  sm:justify-between sm:items-center  sm:ml-6 sm:block">
             <div className="hidden sm:flex space-x-8 justify-end " >
+            <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary' onClick={()=>{ ChangeTheme()}}>
+            {(theme==="light")?
+              <SunIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white" />:
+           
+              <MoonIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white" />
+            }
+          
+            </button>
               <Link to="/about">
-                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>About</button>
+              <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><InformationCircleIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
+               
               </Link>
               <Link to="/contactUs">
-                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>Contact Us</button>
+              <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><PhoneIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
               </Link>
               <Link to="/products">
-                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md px-3 py-2 text-sm font-medium border hover:border-solid hover:border-Secondary'>Products</button>
+              <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><BuildingStorefrontIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
               </Link>
               <Link to="/cart">
-                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><ShoppingCartIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 px-4 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
+                <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'><ShoppingCartIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/></button>
               </Link>
-
               <div className="flex-shrink-0 ml-auto">
                 <Link to={auth?"/profile":"/login"}>
-              <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'>
-              <UserIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>
+              <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'>
+              {auth? <UserCircleIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>:<PowerIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>}
+             
               </button>
                 </Link>
               </div>
-              <button className='bg-Secondary text-slate-50 font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary' onClick={()=>{ ChangeTheme()}}>
-              {(theme==="light")?
-                <SunIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white" />:
-             
-                <MoonIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white" />
-              }
-            
-              </button>
+           
 
             </div>
             
