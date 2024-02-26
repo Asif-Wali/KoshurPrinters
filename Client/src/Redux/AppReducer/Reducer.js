@@ -1,7 +1,5 @@
-import { TOGGLE_AUTH } from "./ActionType";
-import { TOGGLE_ROLE } from "./ActionType";
-import { TOGGLE_THEME } from "./ActionType";
-import { SET_TOKEN } from "./ActionType";
+import { SET_USER, TOGGLE_AUTH,TOGGLE_ROLE,TOGGLE_THEME, SET_TOKEN } from "./ActionType";
+
 
 
 export const initialState = {
@@ -34,6 +32,11 @@ export const initialState = {
         case SET_TOKEN:{
             return {
               ...state, token:payload
+            }
+          }
+          case SET_USER:{
+            return {
+              ...state, user:payload
             }
           }
       

@@ -4,10 +4,11 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link, useNavigate } from 'react-router-dom'
-import { loginRoute } from '../Utilities/APIRoutes';
+// import { loginRoute } from '../Utilities/APIRoutes';
 import { useDispatch, useSelector } from 'react-redux';
+import { AssignToken,SetUser } from '../Redux/AppReducer/Action';
 
-import {  } from 'react-redux';
+
 const initialState={
     email:"",
     password:"",
@@ -16,6 +17,7 @@ export const Login = () => {
   const [LoginDetails, setLoginDetails]= useState(initialState);
   const [PasswordVisible, setPasswordVisible]=useState(false);
   const Navigate= useNavigate();
+  const Dispatch= useDispatch();
   const auth=useSelector((store)=>store.isAuth)
   console.log(auth);
   const ToastStyling ={
@@ -33,17 +35,19 @@ const NavigateToProfile=(auth)=>{
    };
    
 }
+
+
+
 useEffect(()=>{
- 
  NavigateToProfile(auth);
-},[])
+})
 
 
 
 const HandleValidation=(values)=>{
 const {password}=values;
 if(password.length<6){
-  toast.error("Password Length should be greater than 6 characters", ToastStyling);
+  toast.error("Password Length should be greater than or equal to  6 characters", ToastStyling);
   return false;
 }
 return true;
@@ -62,7 +66,12 @@ return true;
           toast.error(data.msg, ToastStyling);
         }
         else if(data.status===true){
+
           toast.success(data.msg, ToastStyling);
+          Dispatch(AssignToken(data.token));
+          Dispatch(SetUser(data.user));
+        
+          Navigate("/");
           setLoginDetails(initialState);
         }
       } catch (error) {
