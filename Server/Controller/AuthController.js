@@ -11,7 +11,9 @@
        const HashedPassword=await bcrypt.hash(password, 5);
         const user = await userModel.create({name, email, password:HashedPassword, phoneNumber, isChecked,});
         const token= jwt.sign({email: email},process.env.JSON_Secret ,{ expiresIn: '1h' });
-        return res.status(201).json({status: true, msg: "User created Successfully.Redirecting to Home Page", user:user, token});
+        const userToSend = { ...user.toObject() }; 
+        delete userToSend.password;
+        return res.status(201).json({status: true, msg: "User created Successfully.Redirecting to Home Page", user:userToSend, token});
     } catch (error) {
         res.status(500).json({status:false, msg: 'Internal Server Error'});
     };
@@ -27,6 +29,7 @@
         
         const user= await userModel.findOne({email})
       
+      
         if(!user) return res.json({msg:"User doesn't exist", status:false});
         const PasswordCheck=await bcrypt.compare(password, user.password);
         if (!PasswordCheck){
@@ -34,7 +37,9 @@
         }
         else if(PasswordCheck){
             const token= jwt.sign({email: email},process.env.JSON_Secret ,{ expiresIn: '1h' });
-            res.status(200).json({status: true, msg: "Logged in Successfully", token, user});
+            const userToSend = { ...user.toObject() }; 
+            delete userToSend.password;
+            res.status(200).json({status: true, msg: "Logged in Successfully", token, user:userToSend});
          }else{
             return res.status(200).json({status: false, msg: "Something went wrong.Please try again later."});
          }
