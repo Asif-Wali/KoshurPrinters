@@ -45,6 +45,6 @@
          }
       
     } catch (error) {
-        res.json({status:false, msg:"Internal Sever Error"});
+        res.json({status:false, msg:"Internal Server Error"});
     }
 }
