@@ -45,6 +45,7 @@
          }
       
     } catch (error) {
+        console.log(error);
         res.json({status:false, msg:"Internal Server Error"});
     }
 }
