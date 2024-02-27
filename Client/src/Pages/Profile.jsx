@@ -65,10 +65,12 @@ export const Profile = () => {
     </div>
 
    {user.role==="user"?
-   <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 flex  flex-col items-center justify-center gap-4">
-      <h1 className="title-font font-medium text-3xl text-Primary text-center ">{user.name}</h1>
-      <p className="leading-relaxed text-center font-bold text-cyan-900">You are Welcome.</p>
-   </div> 
+   <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 bg-gray-100 rounded-lg p-8 flex flex-col items-center justify-center gap-4 md:mr-auto w-full mt-10 md:mt-0">
+      <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 flex  flex-col items-center justify-center gap-4">
+          <h1 className="title-font font-medium text-3xl text-Primary text-center ">{user.name}</h1>
+          <p className="leading-relaxed text-center font-bold text-cyan-900">You are Welcome.</p>
+      </div> 
+   </div>
    
    :
     <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 bg-gray-100 rounded-lg p-8 flex flex-col items-center justify-center gap-4 md:mr-auto w-full mt-10 md:mt-0">
