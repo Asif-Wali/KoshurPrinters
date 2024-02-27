@@ -7,10 +7,15 @@ import 'swiper/css/effect-cards';
 import '../Styles/Swiper.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper/modules';
+import {useSelector} from 'react-redux';
 
 
 export const Home = () => {
 
+  const userstore=useSelector((store)=>store.user);
+  console.log(userstore);
+  const auth=useSelector((store)=>store.isAuth);
+  console.log(auth);
 
 useEffect(()=>{
   // Scroll to the top of the screen

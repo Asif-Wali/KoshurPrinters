@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { registerRoute } from '../Utilities/APIRoutes';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
-import { AssignToken,SetUser } from '../Redux/AppReducer/Action';
+import { AssignToken,SetUser,ToggleAuth } from '../Redux/AppReducer/Action';
 
 const initialState={
   name:"",
@@ -35,6 +35,9 @@ export const Register = () => {
   const [ConfirmPasswordVisible, setConfirmPasswordVisible]=useState(false);
   const Navigate= useNavigate();
   const Dispatch= useDispatch();
+  const auth=useSelector((store)=>store.isAuth)
+  const theme=useSelector((store)=>store.theme)
+ 
   useEffect(()=>{
     // Scroll to the top of the screen
     window.scrollTo({
@@ -42,6 +45,12 @@ export const Register = () => {
     });
     
       },[]);
+
+useEffect(()=>{
+    if(auth){
+      Navigate("/profile")
+    }
+},[auth, Navigate])   
   const ToastStyling ={
         position:"bottom-center",
                 autoClose: 2500,
@@ -84,17 +93,24 @@ export const Register = () => {
     
     if(HandleValidation(userdetails)){
       try {
-        const{data}= await axios.post("http://localhost:5000/api/auth/register", userdetails);
-  
-        if(data.status===false){
-          toast.error(data.msg, ToastStyling);
+        const{data: {status, user, token, msg}}= await axios.post(registerRoute, userdetails);
+       
+        if(status===false){
+          toast.error(msg, ToastStyling);
         }
-        else if(data.status===true){
-
-          toast.success(data.msg, ToastStyling);
-          Dispatch(AssignToken(data.token));
-          Dispatch(SetUser(data.user));
-          Navigate("/");
+        else if(status===true){
+          const person={...user, token, isAuth:true, theme:theme}
+          const User=JSON.stringify(person);
+          console.log(User)
+          localStorage.setItem("User",User);
+          toast.success(msg, ToastStyling);
+          Dispatch(AssignToken(token));
+          Dispatch(SetUser(user));
+          Dispatch(ToggleAuth(!auth));
+          // setTimeout(()=>{
+          //   Navigate("/");
+          // },3000)
+          
           setsignUpDetails(initialState);
         
 
@@ -107,6 +123,7 @@ export const Register = () => {
      
     }  
   }
+
 
   return (<div className="bg-white py-10">
           <div className="container flex flex-col mx-auto bg-white rounded-lg py-2">

@@ -23,7 +23,7 @@ export const Products = () => {
     {/*Accordian*/}
       <div className='w-full flex gap-2 justify-evenly px-2 py-2 items-center bg-gray-600'>
             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className={`w-full text-white ${showOptions? "bg-Primary" : "bg-gray-900"} text-center  font-normal border border-white  gap-4  text-sm  py-2  flex items-center justify-center rounded-lg`} type="button" onClick={ToggleOptionsVisibility}>Filter by Category<svg className={`w-2.5 h-2.5 ${showOptions?"rotate-180":"rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
             </svg>
 
             </button>

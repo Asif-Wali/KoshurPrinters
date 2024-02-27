@@ -6,7 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link, useNavigate } from 'react-router-dom'
 // import { loginRoute } from '../Utilities/APIRoutes';
 import { useDispatch, useSelector } from 'react-redux';
-import { AssignToken,SetUser } from '../Redux/AppReducer/Action';
+import { AssignToken,SetUser,ToggleAuth } from '../Redux/AppReducer/Action';
+import { loginRoute } from '../Utilities/APIRoutes';
+
 
 
 const initialState={
@@ -19,7 +21,9 @@ export const Login = () => {
   const Navigate= useNavigate();
   const Dispatch= useDispatch();
   const auth=useSelector((store)=>store.isAuth)
-  console.log(auth);
+  const theme=useSelector((store)=>store.theme)
+  
+  
   const ToastStyling ={
             position:"bottom-center",
             autoClose: 2500,
@@ -28,19 +32,17 @@ export const Login = () => {
             theme:"dark"
 
 };
-const NavigateToProfile=(auth)=>{
-  if(auth===true){
-   
-    Navigate("/profile");
-   };
-   
-}
-
-
 
 useEffect(()=>{
- NavigateToProfile(auth);
-})
+  if(auth){
+    Navigate("/profile")
+  }
+},[auth, Navigate])
+
+
+
+
+
 
 
 
@@ -60,18 +62,25 @@ return true;
     if(HandleValidation(userdetails)){
       try {
         // const {data}= await axios.post(loginRoute,userdetails);
-        const {data} = await axios.post("http://localhost:5000/api/auth/login",userdetails)
+        const {data: {status, user, token, msg}} = await axios.post(loginRoute,userdetails)
         
-        if(data.status===false){
-          toast.error(data.msg, ToastStyling);
+        if(status===false){
+          toast.error(msg, ToastStyling);
         }
-        else if(data.status===true){
-
-          toast.success(data.msg, ToastStyling);
-          Dispatch(AssignToken(data.token));
-          Dispatch(SetUser(data.user));
-        
-          Navigate("/");
+        else if(status===true){
+         
+          const person={user, token, isAuth:true, theme:theme}
+          const User=JSON.stringify(person);
+          console.log(User)
+          localStorage.setItem("User",User);
+          toast.success(msg, ToastStyling);
+          Dispatch(AssignToken(token));
+          Dispatch(SetUser(user));
+          Dispatch(ToggleAuth(!auth));
+          // setTimeout(()=>{
+          //   Navigate("/");
+          // },3000)
+          
           setLoginDetails(initialState);
         }
       } catch (error) {

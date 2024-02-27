@@ -1,7 +1,7 @@
 import React from 'react'
 import { Disclosure,} from '@headlessui/react'
 import { Link } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, ShoppingCartIcon,  MoonIcon, SunIcon, PowerIcon, UserIcon, InformationCircleIcon, PhoneIcon, BuildingStorefrontIcon} from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, ShoppingCartIcon,  MoonIcon, SunIcon, UserIcon, InformationCircleIcon, PhoneIcon, BuildingStorefrontIcon} from '@heroicons/react/24/outline'
 import Logo from "../Images/logo512.png";
 import { useDispatch, useSelector } from 'react-redux';
 import { ToggleTheme } from '../Redux/AppReducer/Action';
@@ -10,18 +10,40 @@ import { ToggleTheme } from '../Redux/AppReducer/Action';
 const Navbar=()=>{
   const auth=useSelector((store)=>store.isAuth)
   const theme=useSelector((store)=>store.theme)
+  const store=useSelector((store)=>store) 
   const Dispatch= useDispatch();
-  console.log(auth);
-  console.log(theme);
-   
   const ChangeTheme=()=>{
     if(theme==="light"){
+      const newStorage=JSON.parse(localStorage.getItem("User"));
+      const newState={...newStorage, theme:"dark"};
+      localStorage.setItem("User", JSON.stringify(newState));
       Dispatch(ToggleTheme("dark"));
     }
     else{
+      const newStorage=JSON.parse(localStorage.getItem("User"));
+      const newState={...newStorage, theme:"light"};
+      localStorage.setItem("User", JSON.stringify(newState));
       Dispatch(ToggleTheme("light"));
     }
   }
+
+  const getInitials = () => {
+   if(auth){
+    
+    return store.user.name
+    .split(' ')
+    .map((part) => part.charAt(0))
+    .slice(0, 2)
+    .join('');
+  }
+  }
+  const profilename=getInitials()
+     
+  
+
+
+
+
 
   return<Disclosure as="nav" className="  bg-cyan-600 w-full">
   {({ open }) => (
@@ -77,7 +99,7 @@ const Navbar=()=>{
               <div className="flex-shrink-0 ml-auto">
                 <Link to={auth?"/profile":"/login"}>
               <button className='bg-Secondary text-white font-semibold hover:bg-Primary hover:text-white rounded-md text-sm font-medium border hover:border-solid hover:border-Secondary'>
-              {auth? <UserIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>:<PowerIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>}
+              {auth?<h1 className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white">{`${profilename}`}</h1>:<UserIcon className="h-9 w-auto relative inline-flex items-center bg-Secondary text-white font-medium	justify-center rounded-md p-2 hover:bg-Primary hover:text-white hover:ring-black focus:outline-none focus:ring-2 focus:ring-inset  focus:ring-white "/>}
              
               </button>
                 </Link>

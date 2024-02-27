@@ -1,19 +1,19 @@
 import React from 'react'
 import Logo from "../Images/logo512.png";
-import { Link } from 'react-router-dom';
+
 
 export const Footer = () => {
   return (
     <footer className="text-gray-600 body-font">
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    <Link className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+    <div className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
       <img
             className="h-12 w-auto"
             src={`${Logo}`}
             alt="Koshur Printers Logo"
             />
       <span className="ml-3 text-xl">Koshur Printers</span>
-      </Link>
+      </div>
     <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Koshur Printers —
       <a href="https://www.linkedin.com/in/awali016" className="text-Primary ml-1 font-bold" rel="noopener noreferrer" target="_blank">By ASif WaLi</a>
     </p>

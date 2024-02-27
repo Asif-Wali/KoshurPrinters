@@ -9,6 +9,7 @@ import {Register} from "./Pages/Register";
 import {Products} from "./Pages/Products";
 import { Footer } from "./Components/Footer";
 import { ContactUs } from "./Pages/ContactUs";
+import { Profile } from "./Pages/Profile";
 export default function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ export default function App() {
       <Route path="/register" element={<Register/>} />
       <Route path="/products" element={<Products/>}/>
       <Route path="/cart" element={<Cart />} />
+      <Route path="/profile" element={<Profile/>} />
       
       </Routes>
       <Footer/>
