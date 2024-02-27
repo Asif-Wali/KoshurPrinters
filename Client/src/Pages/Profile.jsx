@@ -34,9 +34,9 @@ export const Profile = () => {
         const newState={ theme:theme,};
         localStorage.setItem("User", JSON.stringify(newState));
         console.log(isAuth);
-        // setTimeout(()=>{
-        //     Navigate("/")
-        // }, 2000)
+        setTimeout(()=>{
+            Navigate("/")
+        },1000)
       
       
   }  
@@ -62,16 +62,17 @@ export const Profile = () => {
     
     </div>
 
-   { user.role==="user"?<div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-   <h1 class="title-font font-medium text-3xl text-gray-900">Slow-carb next level shoindcgoitch ethical authentic, poko scenester</h1>
-   <p class="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
-   
-    </div>:<div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 flex  flex-col items-center justify-center gap-4">
+   {user.role==="user"?<div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 flex  flex-col items-center justify-center gap-4">
+      <h1 class="title-font font-medium text-3xl text-Primary text-center ">{user.name}</h1>
+      <p class="leading-relaxed text-center font-bold text-cyan-900">You are Welcome.</p>
+   </div> 
+   :
+  <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 flex  flex-col items-center justify-center gap-4">
     <h1 class="title-font font-medium text-3xl text-Primary text-center ">{user.name}</h1>
-    <p class="leading-relaxed text-center font-bold text-cyan-900">You are Welcome Admin</p> 
+    <p class="leading-relaxed text-center font-bold text-cyan-900">Admin, You are Welcome.</p> 
 
     {user.role==="admin"?<button className="text-white self-center bg-cyan-800 border-0 py-2 px-8 focus:outline-none hover:bg-Secondary rounded text-lg" >Admin Panel</button>:""}
-           </div>}
+  </div>}
    
   </div>
 </section>

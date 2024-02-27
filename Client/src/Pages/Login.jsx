@@ -34,9 +34,9 @@ export const Login = () => {
 };
 
 useEffect(()=>{
-  if(auth){
-    Navigate("/profile")
-  }
+  // if(auth){
+  //   Navigate("/profile")
+  // }
 },[auth, Navigate])
 
 
@@ -77,14 +77,14 @@ return true;
           Dispatch(AssignToken(token));
           Dispatch(SetUser(user));
           Dispatch(ToggleAuth(!auth));
-          // setTimeout(()=>{
-          //   Navigate("/");
-          // },3000)
+          setTimeout(()=>{
+            Navigate("/profile");
+          },3000)
           
           setLoginDetails(initialState);
         }
       } catch (error) {
-        toast.error("Error from the Backend");
+        toast.error("Error from the Server",ToastStyling);
         console.log(error);
       }
     }

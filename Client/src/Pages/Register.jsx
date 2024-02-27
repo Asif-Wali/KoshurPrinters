@@ -107,9 +107,9 @@ useEffect(()=>{
           Dispatch(AssignToken(token));
           Dispatch(SetUser(user));
           Dispatch(ToggleAuth(!auth));
-          // setTimeout(()=>{
-          //   Navigate("/");
-          // },3000)
+          setTimeout(()=>{
+            Navigate("/profile");
+          },3000)
           
           setsignUpDetails(initialState);
         
