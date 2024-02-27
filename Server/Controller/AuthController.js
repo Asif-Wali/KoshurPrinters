@@ -35,12 +35,15 @@
         const PasswordCheck=await bcrypt.compare(password, user.password);
         if (!PasswordCheck){
             return res.status(200).json({msg:"Incorrect Password.",status:false})
-        }else{
-            const token= jwt.sign({email: email},process.env.JSON_Secret ,{ expiresIn: '1h' });
-            const userToSend = { ...user.toObject() }; 
-            delete userToSend.password;
-            return res.status(200).json({status: true, msg: "Logged in Successfully", token, user:userToSend});
+        }else if(PasswordCheck){
+                const token= jwt.sign({email: email},process.env.JSON_Secret ,{ expiresIn: '1h' });
+                const userToSend = { ...user.toObject() }; 
+                delete userToSend.password;
+                return res.status(200).json({status: true, msg: "Logged in Successfully", token, user:userToSend});
         }
+        else{
+            return res.status(200).json({status: false, msg: "Something went wrong.Please try again later."});
+         }
       
     } catch (error) {
         console.log(error);
