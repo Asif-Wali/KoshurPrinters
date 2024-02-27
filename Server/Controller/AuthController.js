@@ -15,6 +15,7 @@
         delete userToSend.password;
         return res.status(201).json({status: true, msg: "User created Successfully.Redirecting to Home Page", user:userToSend, token});
     } catch (error) {
+        console.log(error);
         res.status(500).json({status:false, msg: 'Internal Server Error'});
     };
     
@@ -34,15 +35,12 @@
         const PasswordCheck=await bcrypt.compare(password, user.password);
         if (!PasswordCheck){
             return res.status(200).json({msg:"Incorrect Password.",status:false})
-        }
-        else if(PasswordCheck){
+        }else{
             const token= jwt.sign({email: email},process.env.JSON_Secret ,{ expiresIn: '1h' });
             const userToSend = { ...user.toObject() }; 
             delete userToSend.password;
-            res.status(200).json({status: true, msg: "Logged in Successfully", token, user:userToSend});
-         }else{
-            return res.status(200).json({status: false, msg: "Something went wrong.Please try again later."});
-         }
+            return res.status(200).json({status: true, msg: "Logged in Successfully", token, user:userToSend});
+        }
       
     } catch (error) {
         console.log(error);
