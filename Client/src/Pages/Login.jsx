@@ -56,7 +56,6 @@ return true;
 }
 
   const HandleLogin= async (e)=>{
-    e.preventDefault();
     let userdetails={...LoginDetails};
     if(HandleValidation(userdetails)){
       try {

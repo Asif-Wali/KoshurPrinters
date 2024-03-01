@@ -10,6 +10,7 @@ import {Products} from "./Pages/Products";
 import { Footer } from "./Components/Footer";
 import { ContactUs } from "./Pages/ContactUs";
 import { Profile } from "./Pages/Profile";
+import { AdminPanel } from "./Pages/AdminPanel";
 export default function App() {
   return (
     <div>
@@ -24,6 +25,7 @@ export default function App() {
       <Route path="/products" element={<Products/>}/>
       <Route path="/cart" element={<Cart />} />
       <Route path="/profile" element={<Profile/>} />
+      <Route path="/adminpanel" element={<AdminPanel/>}/>
       
       </Routes>
       <Footer/>
