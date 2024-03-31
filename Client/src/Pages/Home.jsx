@@ -79,7 +79,7 @@ useEffect(()=>{
                 />
                 <img
                   className="object-cover w-24 h-24 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-                  src="https://cdn-gjkdp.nitrocdn.com/JtLCHzGIeDqwNcPkNDwtksvsgIwnNCEu/assets/images/optimized/rev-4c73667/www.brushyourideas.com/blog/wp-content/uploads/2021/04/common_screen_printing.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYIPibBUAm2dJxQQ7jVNvTWpM40vL4wvk9w&usqp=CAU"
                   alt="Pushing Ink through Squeegee"
                 />
               </div>

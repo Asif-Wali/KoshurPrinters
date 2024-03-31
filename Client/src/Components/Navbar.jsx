@@ -10,7 +10,7 @@ import { ToggleTheme } from '../Redux/AppReducer/Action';
 const Navbar=()=>{
   const auth=useSelector((store)=>store.isAuth)
   const theme=useSelector((store)=>store.theme)
-  const store=useSelector((store)=>store) 
+  const user=useSelector((store)=>store.user) 
   const Dispatch= useDispatch();
   const ChangeTheme=()=>{
     if(theme==="light"){
@@ -30,7 +30,7 @@ const Navbar=()=>{
   const getInitials = () => {
    if(auth){
     
-    return store.user.name
+    return user.name
     .split(' ')
     .map((part) => part.charAt(0).toUpperCase())
     .slice(0, 2)
@@ -45,7 +45,7 @@ const Navbar=()=>{
 
 
 
-  return<Disclosure as="nav" className="  bg-cyan-600 w-full">
+  return <Disclosure as="nav" className="  bg-cyan-600 w-full">
   {({ open }) => (
     <>
       <div className="mx-auto w-11/12 px-2 sm:px-6 lg:px-8 justify-between">
@@ -162,7 +162,7 @@ const Navbar=()=>{
       </Disclosure.Panel>
     </>
   )}
-</Disclosure>
+         </Disclosure>
 
 
   

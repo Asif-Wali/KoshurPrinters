@@ -1,5 +1,6 @@
 import React,{useState}from 'react'
 import { ProductComponentAdmin } from '../Components/ProductComponentAdmin'
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline'
 const Products=[1,2,3,4,5,6,7]
 
 export const AdminPanel = () => {
@@ -37,7 +38,7 @@ export const AdminPanel = () => {
     <section className="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased">
         <div className="mx-auto max-w-screen-xl px-4 lg:px-12">
                 {/*Start coding here*/}
-            <div className="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden border-2 border-[yellow]" >
+            <div className="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden border-2 border-[yellow] relative" >
                 <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                     <div className="w-full md:w-1/2">
                         <form className="flex items-center">
@@ -135,80 +136,91 @@ export const AdminPanel = () => {
                     </span>
                     <ul className="inline-flex items-stretch -space-x-px">
                         <li>
-                            <a href="#" className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <button href="#" className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                                 <span className="sr-only">Previous</span>
                                 <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
                                 </svg>
-                            </a>
+                            </button>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                            <button className="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</button>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                            <button href="#" className="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</button>
                         </li>
                         <li>
-                            <a href="#" aria-current="page" className="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                            <button  aria-current="page" className="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</button>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+                        <button  aria-current="page" className="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">...</button>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
+                        <button aria-current="page" className="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">100</button>
                         </li>
                         <li>
-                            <a href="#" className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <button className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                                 <span className="sr-only">Next</span>
                                 <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                                 </svg>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </nav>
 
                 {/* create modal*/}
-                <div id="createProductModal" tabindex="-1" aria-hidden="true" class={`${showCreate?"":"hidden"} mx-auto absolute z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full `}>
-                <div class="relative mx-auto  w-full max-w-2xl max-h-full ">
+                <div id="createProductModal" className={`${showCreate?"":"hidden"} h-full overflow-x-auto overflow-y-auto 
+                mx-auto absolute  w-full top-[80px] `}>
+                <div className="relative mx-auto  w-full">
                 {/*Modal content */}
-                    <div class="relative p-4 bg-cyan-800  rounded-lg shadow dark:bg-gray-800 sm:p-5">
+                    <div className="relative p-4 bg-cyan-800  rounded-lg shadow dark:bg-gray-800 sm:p-5">
                         {/*Modal header*/}
-                        <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
-                            <h3 class="text-lg font-semibold text-white dark:text-white">Add Product</h3>
-                            <button type="button" class="text-white bg-Primary hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-target="createProductModal" data-modal-toggle="createProductModal" onClick={ToggleCreateModel}>
-                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <div className="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+                            <h3 className="text-lg font-semibold text-white dark:text-white">Add Product</h3>
+                            <button type="button" className="text-white bg-Primary hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"  onClick={ToggleCreateModel}>
+                                <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
-                                <span class="sr-only">Close modal</span>
+                                <span className="sr-only">Close modal</span>
                             </button>
                         </div>
                         {/*Modal body*/}
                         
-                            <div class="grid gap-4 mb-4 sm:grid-cols-2">
-                                <div>
-                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                                    <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required=""/>
+                            <div className="grid gap-4 mb-4 sm:grid-cols-2 xs:grid-cols-1 grid-cols-2">
+                                <div className='col-span-2'>
+                                    <label for="image" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image URL</label>
+                                    <input type="text" name="image" id="image" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required=""/>
                                 </div>
+
                                 <div>
-                                    <label for="quality" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Quality</label>
-                                    <input type="text" name="quality" id="quality" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Make Quality" required=""/>
+                                    <label for="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                                    <input type="text" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required=""/>
                                 </div>
+
                                 <div>
-                                    <label for="color" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Color</label>
-                                    <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Product color" required=""/>
+                                    <label for="quality" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Quality</label>
+                                    <input type="text" name="quality" id="quality" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Make Quality" required=""/>
                                 </div>
+
                                 <div>
-                                    <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
-                                    <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter price of the product" required=""/>
+                                    <label for="color" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Color</label>
+                                    <input type="text" name="brand" id="brand" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Product color" required=""/>
                                 </div>
+
                                 <div>
-                                <label for="feature" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Feature</label>
-                                <input type="text" name="feature" id="feature" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Feature of Product.." required=""/>
+                                    <label for="price" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                                    <input type="number" name="price" id="price" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter price of the product" required=""/>
                                 </div>
+
                                 <div>
-                                <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
-                                <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <label for="feature" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Feature</label>
+                                <input type="text" name="feature" id="feature" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Feature of Product.." required=""/>
+                                </div>
+
+                                <div>
+                                <label for="category" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                                <select id="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                 <option selected="">Select category</option>
                                 <option value="T-Shirts">T-Shirts</option>
                                 <option value="Hoodies">Hoodies</option>
@@ -218,29 +230,31 @@ export const AdminPanel = () => {
                                 </select>
                                 </div>
                                 
-                                <div >
-                                    <button onClick={toggleAccordion} className="block mb-2 text-sm font-medium text-gray-900 dark:text-white focus:outline-none bg-white p-2 rounded">
-                                        Sizes Available <span>{isOpen ? '-' : '+'}</span>
+                                <div className='relative' >
+                                    <label for="availablesizes" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose Available Sizes</label>
+                                    <button onClick={toggleAccordion} className="flex items-center justify-center text-sm font-medium text-gray-900 dark:text-white focus:outline-none bg-white p-2 rounded gap-2">
+                                        Sizes Available <span>{isOpen ? <MinusIcon className='h-4 w-4 text-black font-bold'/> : <PlusIcon className='h-4 w-4 text-black font-bold'/>}</span>
                                     </button>
                                     {isOpen && (
-                                        <div className="flex flex-col space-y-1 bg-cyan-800 w-fit p-2 ">
-                                        <label className="inline-flex items-center bg-Primary text-white px-2 py-1 rounded">
+                                        <div className="flex flex-col space-y-1 bg-gray-800 rounded-lg border-2 border-[green] w-fit absolute z-[100]">
+                                        
+                                        <label className="inline-flex items-center bg-Primary text-white px-10 py-1  rounded">
                                             <input type="checkbox" className="form-checkbox" value="S" onChange={handleCheckboxChange} />
                                             <span className="ml-2 ">S</span>
                                         </label>
-                                        <label className="inline-flex items-center bg-Primary text-white px-2 py-1 rounded">
+                                        <label className="inline-flex items-center bg-Primary text-white px-10 py-1 rounded">
                                             <input type="checkbox" className="form-checkbox" value="M" onChange={handleCheckboxChange} />
                                             <span className="ml-2">M</span>
                                         </label>
-                                        <label className="inline-flex items-center bg-Primary text-white px-2 py-1 rounded">
+                                        <label className="inline-flex items-center bg-Primary text-white px-10 py-1 rounded">
                                             <input type="checkbox" className="form-checkbox" value="L" onChange={handleCheckboxChange} />
                                             <span className="ml-2">L</span>
                                         </label>
-                                        <label className="inline-flex items-center bg-Primary text-white px-2 py-1 rounded">
+                                        <label className="inline-flex items-center bg-Primary text-white px-10 py-1 rounded">
                                             <input type="checkbox" className="form-checkbox" value="XL" onChange={handleCheckboxChange} />
                                             <span className="ml-2">XL</span>
                                         </label>
-                                        <label className="inline-flex items-center bg-Primary text-white px-2 py-1 rounded">
+                                        <label className="inline-flex items-center bg-Primary text-white px-10 py-1 rounded">
                                             <input type="checkbox" className="form-checkbox" value="XXL" onChange={handleCheckboxChange} />
                                             <span className="ml-2">XXL</span>
                                         </label>
@@ -249,18 +263,18 @@ export const AdminPanel = () => {
                                 </div>
 
 
-                                <div class="sm:col-span-2">
-                                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
-                                <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write product description here"></textarea>
+                                <div className="col-span-2">
+                                <label for="description" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+                                <textarea id="description" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write product description here"></textarea>
                                 </div>
                             </div>
-                            <button class="text-white inline-flex items-center bg-Primary hover:bg-Secondary font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                                <svg class="mr-1 -ml-1 w-6 h-6" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <button className="text-white inline-flex items-center bg-Primary hover:bg-Secondary font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <svg className="mr-1 -ml-1 w-6 h-6" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
                                 </svg>
                                 Add new product
                             </button>
-                     
+                    
                     </div>
                 </div>
                 </div>
@@ -342,6 +356,7 @@ export const AdminPanel = () => {
         </div>
     </section>
     {/*End block*/}
+    
 
     </div>
   )

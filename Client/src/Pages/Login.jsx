@@ -33,10 +33,14 @@ export const Login = () => {
 };
 
 useEffect(()=>{
-  // if(auth){
-  //   Navigate("/profile")
-  // }
-},[auth, Navigate])
+  function ReRoute(){
+    if(auth){
+      Navigate("/profile")
+    }
+  }
+  ReRoute()
+ 
+})
 
 
 
@@ -66,12 +70,11 @@ return true;
           toast.error(msg, ToastStyling);
         }
         else if(status===true){
-         
+          toast.success(msg, ToastStyling);
           const person={user, token, isAuth:true, theme:theme}
           const User=JSON.stringify(person);
-          console.log(User)
           localStorage.setItem("User",User);
-          toast.success(msg, ToastStyling);
+          
           Dispatch(AssignToken(token));
           Dispatch(SetUser(user));
           Dispatch(ToggleAuth(!auth));
@@ -79,7 +82,7 @@ return true;
             Navigate("/profile");
           },3000)
           
-          setLoginDetails(initialState);
+         
         }
       } catch (error) {
         toast.error("Error from the Server",ToastStyling);
@@ -97,7 +100,7 @@ return true;
             <div className="flex justify-center w-full h-full my-auto xl:gap-14 lg:justify-normal md:gap-5">
               <div className="flex items-center justify-center w-full lg:p-12">
                 <div className="flex items-center xl:p-10">
-                  <form className="flex flex-col w-full h-full pb-6 text-center p-10 my-4 bg-white shadow-lg rounded-3xl border-2 border-Primary" onSubmit={(e)=>HandleLogin(e)}>
+                  <form className="flex flex-col w-full h-full pb-6 text-center p-10 my-4 bg-white shadow-lg rounded-3xl border-2 border-Primary">
                     <h3 className="mb-8 text-4xl font-extrabold text-cyan-700">Sign In</h3>
                     <Link className="flex items-center justify-center w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-white bg-gray-900 hover:bg-cyan-800  focus:ring-4 focus:ring-gray-300">
                       <img className="h-5 mr-2" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-google.png" alt="Google Icon"/>
@@ -140,7 +143,7 @@ return true;
                       
                       <Link to="/userforgotpassword" className=" text-sm font-medium font-bold text-cyan-800">Forgot password?</Link>
                     </div>
-                    <button className="w-full px-6 py-4 my-5  font-bold leading-none text-white transition duration-300  md:w-96 bg-Primary border-0 focus:outline-none hover:bg-Secondary rounded text-lg" type='submit'>Sign In</button>
+                    <button className="w-full px-6 py-4 my-5  font-bold leading-none text-white transition duration-300  md:w-96 bg-Primary border-0 focus:outline-none hover:bg-Secondary rounded text-lg" onClick={(e)=>{HandleLogin(e)}}>Sign In</button>
                     <p className="text-sm leading-relaxed text-gray-900">Dont have an account? <Link to="/register" className="font-bold text-Primary">Create an Account</Link></p>
                   </form>
                 </div>

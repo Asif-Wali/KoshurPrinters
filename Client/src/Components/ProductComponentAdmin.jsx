@@ -19,7 +19,7 @@ const HandleShowUD=()=>{
                                 <td class="px-4 py-3">PC</td>
                                 <td class="px-4 py-3">T-shirt</td>
                                 <td class="px-4 py-3 max-w-[12rem] truncate">What is a product description? A product description describes a product.</td>
-                                <td class="px-4 py-3">$2999</td>
+                                <td class="px-4 py-3">&#x20B9; 2999</td>
                                 <td class="px-4 py-3 flex items-center justify-end relative">
                                     <button id="apple-imac-27-dropdown-button" data-dropdown-toggle="apple-imac-27-dropdown" class="inline-flex items-center text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 p-1.5 dark:hover-bg-gray-800 text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100 "  type="button" onClick={()=>{
                                         HandleShowUD()
@@ -28,7 +28,7 @@ const HandleShowUD=()=>{
                                             <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
                                         </svg>
                                     </button>
-                                    <div id="apple-imac-27-dropdown" class= {`${showUD? "hidden":""} absolute  top-12 z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600`}>
+                                    <div id="apple-imac-27-dropdown" class= {`${showUD? "hidden":""} absolute  top-1 right-14 z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600`}>
                                         <ul class="py-1 text-sm" aria-labelledby="apple-imac-27-dropdown-button">
                                             <li>
                                                 <button type="button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="flex w-full items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-700 dark:text-gray-200">

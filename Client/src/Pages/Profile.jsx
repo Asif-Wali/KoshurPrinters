@@ -10,8 +10,7 @@ export const Profile = () => {
     const user=useSelector((store)=>store.user);
     const isAuth=useSelector((store)=>store.isAuth);
     const theme=useSelector((store)=>store.theme)
-    console.log(isAuth);
-    console.log(user);
+   
     useEffect(()=>{
         if(isAuth===false){
             Navigate("/login");
@@ -37,7 +36,7 @@ export const Profile = () => {
         localStorage.setItem("User", JSON.stringify(newState));
         console.log(isAuth);
         setTimeout(()=>{
-            Navigate("/")
+            Navigate("/login")
         },1000)
       
       
