@@ -14,7 +14,6 @@ const initialState={
     ...DefaultState,
     ...savedstate
 }  
-console.log(savedstate);
 
 const store = legacy_createStore(reducer, initialState);
 

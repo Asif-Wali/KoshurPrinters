@@ -33,14 +33,22 @@ export const Login = () => {
 };
 
 useEffect(()=>{
-  function ReRoute(){
-    if(auth){
-      Navigate("/profile")
+
+  let timeoutId;
+  function ReRoute() {
+    if (auth) {
+    
+      timeoutId = setTimeout(() => {
+        Navigate("/profile");
+      }, 3000);
     }
   }
-  ReRoute()
+  ReRoute();
+
+  return () => clearTimeout(timeoutId);
+
  
-})
+}, [auth, Navigate]);
 
 
 
@@ -60,11 +68,13 @@ return true;
 }
 
   const HandleLogin= async (e)=>{
+    e.preventDefault();
     let userdetails={...LoginDetails};
     if(HandleValidation(userdetails)){
       try {
-        // const {data}= await axios.post(loginRoute,userdetails);
+      
         const {data: {status, user, token, msg}} = await axios.post(loginRoute,userdetails)
+       
         
         if(status===false){
           toast.error(msg, ToastStyling);
@@ -74,15 +84,10 @@ return true;
           const person={user, token, isAuth:true, theme:theme}
           const User=JSON.stringify(person);
           localStorage.setItem("User",User);
-          
+         
           Dispatch(AssignToken(token));
           Dispatch(SetUser(user));
           Dispatch(ToggleAuth(!auth));
-          setTimeout(()=>{
-            Navigate("/profile");
-          },3000)
-          
-         
         }
       } catch (error) {
         toast.error("Error from the Server",ToastStyling);
