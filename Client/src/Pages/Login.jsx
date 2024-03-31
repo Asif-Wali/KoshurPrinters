@@ -69,11 +69,15 @@ return true;
 
   const HandleLogin= async (e)=>{
     e.preventDefault();
+    
     let userdetails={...LoginDetails};
+    
     if(HandleValidation(userdetails)){
       try {
       
+        setLoginDetails(initialState);
         const {data: {status, user, token, msg}} = await axios.post(loginRoute,userdetails)
+
        
         
         if(status===false){
